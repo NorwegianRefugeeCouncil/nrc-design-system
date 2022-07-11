@@ -39,6 +39,8 @@
     "web-vitals": "~1.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.1.6",
     "@storybook/addon-actions": "~5.3",
     "@storybook/addon-knobs": "~5.3",
     "@storybook/addon-links": "~5.3",
@@ -46,13 +48,11 @@
     "@storybook/addon-ondevice-knobs": "~5.3.25",
     "@storybook/react-native": "~5.3.25",
     "@storybook/react-native-server": "~5.3.23",
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.1.6",
     "@testing-library/dom": ">=7.21.4",
     "@testing-library/jest-dom": "~5.11.4",
     "@testing-library/react": "~11.1.0",
     "@testing-library/user-event": "~12.1.10",
-    "@types/react": "^18.0.14",
+    "@types/react": "~17.0.21",
     "@types/react-dom": "^18.0.5",
     "@types/react-native": "^0.69.1",
     "babel-loader": "8.1.0",

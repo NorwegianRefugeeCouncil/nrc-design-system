@@ -40,5 +40,6 @@
     "design-system/lib",
     "design-system/src/reportWebVitals.js",
     "design-system/src/setupTests.js"
-  ]
+  ],
+  "extends": "expo/tsconfig.base"
 }
