@@ -13,10 +13,10 @@
     ],
     "typeRoots": [
       "./node_modules/@types",
-      "./design-system/src/types"
+      "./src/types"
     ],
     "declaration": true,
-    "outDir": "design-system/lib/esm",
+    "outDir": "lib/esm",
     "jsx": "react",
     "jsxFactory": "React.createElement",
     "allowJs": true,
@@ -29,16 +29,12 @@
     "isolatedModules": true
   },
   "include": [
-    "design-system/src/**/*"
+    "src/**/*"
   ],
   "exclude": [
-    "storybook",
-    "assets",
-    "__generated__",
-    "web-build",
+    "src/reportWebVitals.js",
+    "src/setupTests.js",
     "node_modules",
-    "design-system/lib",
-    "design-system/src/reportWebVitals.js",
-    "design-system/src/setupTests.js"
+    "lib"
   ]
 }

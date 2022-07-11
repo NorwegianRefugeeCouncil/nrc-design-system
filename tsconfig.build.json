@@ -1,7 +1,7 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "./design-system/tsconfig.json",
   "compilerOptions": {
-    "outDir": "lib",
+    "outDir": "design-system/lib",
     "noEmit": false
   },
   "exclude": [
