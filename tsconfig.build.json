@@ -1,8 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "outDir": "design-system/lib",
-    "noEmit": false
-  },
-  "exclude": ["**/*.test.tsx", "**/*.test.js", "**/*.stories.js"]
-}
