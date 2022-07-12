@@ -1,19 +1,2 @@
-**/node_modules/
-**/build
-**/yarn-error.log
-.expo/
-dist/
-npm-debug.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
-*.orig.*
-web-build/
-
-__generated__
-
-# macOS
-.DS_Store
+node_modules
 .idea

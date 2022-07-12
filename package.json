@@ -1,66 +1,7 @@
 {
-  "name": "nrc-design-system",
-  "private": false,
-  "version": "0.1.2",
-  "main": "node_modules/expo/AppEntry.js",
-  "homepage": "https://nrc-no.github.io/nrc-design-system/",
-  "scripts": {
-    "postinstall": "expo-yarn-workspaces postinstall",
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject",
-    "storybook": "start-storybook -p 7007",
-    "build-storybook": "build-storybook",
-    "deploy": "gh-pages -d web-build",
-    "predeploy": "expo build:web",
-    "build": "yarn build:esm && yarn build:cjs",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir design-system/lib/cjs",
-    "test": "echo \"Error: no test specified\" && exit 0"
-  },
-  "files": [
-    "design-system/lib"
-  ],
-  "dependencies": {
-    "@expo-google-fonts/roboto": "^0.2.0",
-    "expo": "^44.0.0",
-    "expo-font": "~10.0.4",
-    "expo-status-bar": "~1.2.0",
-    "native-base": "^3.3.7",
-    "react-native-safe-area-context": "~3.3.2",
-    "react-native-svg": "~12.1.1",
-    "react-native-web": "~0.17.5",
-    "react-scripts": "4.0.3",
-    "web-vitals": "~1.0.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.1.6",
-    "@storybook/addon-actions": "~5.3",
-    "@storybook/addon-knobs": "~5.3",
-    "@storybook/addon-links": "~5.3",
-    "@storybook/addon-ondevice-actions": "~5.3.23",
-    "@storybook/addon-ondevice-knobs": "~5.3.25",
-    "@storybook/react-native": "~5.3.25",
-    "@storybook/react-native-server": "~5.3.23",
-    "@testing-library/dom": ">=7.21.4",
-    "@testing-library/jest-dom": "~5.11.4",
-    "@testing-library/react": "~11.1.0",
-    "@testing-library/user-event": "~12.1.10",
-    "@types/react": "~17.0.21",
-    "@types/react-dom": "^18.0.5",
-    "@types/react-native": "^0.69.1",
-    "babel-loader": "8.1.0",
-    "expo-yarn-workspaces": "^1.6.0",
-    "gh-pages": "^3.2.3",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-native": "^0.64.3",
-    "typescript": "^4.7.4"
-  },
-  "resolutions": {
-    "**/ua-parser-js": "0.7.28"
-  }
+  "private": true,
+  "workspaces": [
+    "nrc-design-system",
+    "nrc-storybook"
+  ]
 }
