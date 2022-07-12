@@ -1,19 +1,15 @@
 export default {
-  defaultProps: {
-    variant: "subtle",
-  },
-  baseStyle: () => {
-    return {
-      height: "nrc_10",
-      borderWidth: 1,
-      justifyContent: "center",
-      minWidth: "520px",
-      px: "nrc_4",
-      _text: {
-        fontSize: "20px",
-        fontWeight: "500",
-      },
-    };
+  baseStyle: {
+    height: "nrc_10",
+    borderWidth: "1px",
+    borderRadius: "0px",
+    alignItems: "flex-start",
+    minWidth: "520px",
+    px: "nrc_4",
+    _text: {
+      fontSize: "20px",
+      fontWeight: "500",
+    },
   },
   variants: {
     info: () => ({
