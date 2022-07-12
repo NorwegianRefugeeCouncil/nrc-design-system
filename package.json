@@ -3,5 +3,33 @@
   "workspaces": [
     "nrc-design-system",
     "nrc-storybook"
-  ]
+  ],
+  "scripts": {
+    "lint": "eslint --ext js,ts,tsx .",
+    "lint:fix": "eslint --ext js,ts,tsx --fix ."
+  },
+  "lint-staged": {
+    "{apps,packages}/*/src/**/*.{js,ts,jsx,tsx}": [
+      "eslint --ext js,ts,tsx —-fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "8.19.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-import-resolver-webpack": "0.13.2",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-eslint": "^11.0.0",
+    "prettycli": "^1.4.3"
+  }
 }

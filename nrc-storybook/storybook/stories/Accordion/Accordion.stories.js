@@ -1,20 +1,20 @@
-import React from "react";
-import { storiesOf } from "@storybook/react-native";
-import { Text, VStack } from "native-base";
-import { Accordion, Icon } from "nrc-design-system";
+import React from 'react';
+import { storiesOf } from '@storybook/react-native';
+import { Text, VStack } from 'native-base';
+import { Accordion, Icon } from 'nrc-design-system';
 
-import CenterView from "../CenterView";
+import CenterView from '../CenterView';
 
-storiesOf("Accordion", module)
+storiesOf('Accordion', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
-  .add("Overview, Variants", () => {
+  .add('Overview, Variants', () => {
     const sections = [
       {
-        header: "First Header",
+        header: 'First Header',
         content: <Icon name="save" color="primary.500" />,
       },
       {
-        header: "Second Header",
+        header: 'Second Header',
         content: <Text variant="caption">Lorem ipsum...</Text>,
       },
     ];

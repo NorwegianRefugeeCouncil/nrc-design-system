@@ -1,19 +1,19 @@
-import { storiesOf } from "@storybook/react-native";
-import React from "react";
-import { icons, theme, tokens, Icon } from "nrc-design-system";
-import { select } from "@storybook/addon-knobs";
-import { Box } from "native-base";
+import { storiesOf } from '@storybook/react-native';
+import React from 'react';
+import { icons, theme, tokens, Icon } from 'nrc-design-system';
+import { select } from '@storybook/addon-knobs';
+import { Box } from 'native-base';
 
-import CenterView from "../CenterView";
+import CenterView from '../CenterView';
 
-storiesOf("Icon", module)
+storiesOf('Icon', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
-  .add("Icon, Overview", () => {
+  .add('Icon, Overview', () => {
     const IconNameList = Object.keys(icons);
 
     return (
       <Box
-        style={{ flexWrap: "wrap", flexDirection: "initial", width: "250px" }}
+        style={{ flexWrap: 'wrap', flexDirection: 'initial', width: '250px' }}
       >
         {IconNameList.map((name) => {
           return (
@@ -23,15 +23,15 @@ storiesOf("Icon", module)
               key={name}
               name={name}
               color={select(
-                "color",
+                'color',
                 tokens.colors.icons,
-                theme.colors.icons.dark
+                theme.colors.icons.dark,
               )}
               customIconProps={{
                 innerColor: select(
-                  "inner color",
+                  'inner color',
                   tokens.colors.neutral,
-                  theme.colors.neutral["100"]
+                  theme.colors.neutral['100'],
                 ),
               }}
             />
@@ -40,13 +40,13 @@ storiesOf("Icon", module)
       </Box>
     );
   })
-  .add("Icon", () => {
+  .add('Icon', () => {
     const IconNameList = Object.keys(icons);
 
     return (
       <Icon
-        name={select("name", IconNameList, IconNameList[0])}
-        color={select("color", tokens.colors.icons, theme.colors.icons.dark)}
+        name={select('name', IconNameList, IconNameList[0])}
+        color={select('color', tokens.colors.icons, theme.colors.icons.dark)}
       />
     );
   });

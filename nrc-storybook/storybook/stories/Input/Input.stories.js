@@ -1,13 +1,13 @@
-import React from "react";
-import { storiesOf } from "@storybook/react-native";
-import { VStack, Input, FormControl } from "native-base";
-import { Icon } from "nrc-design-system";
+import React from 'react';
+import { storiesOf } from '@storybook/react-native';
+import { VStack, Input, FormControl } from 'native-base';
+import { Icon } from 'nrc-design-system';
 
-import CenterView from "../CenterView";
+import CenterView from '../CenterView';
 
-storiesOf("Input", module)
+storiesOf('Input', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
-  .add("Overview", () => {
+  .add('Overview', () => {
     return (
       <VStack space={4}>
         <FormControl>
