@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "main": "nrc-storybook/node_modules/expo/AppEntry.js",
-  "homepage": "https://github.com/nrc-no/nrc-design-system",
+  "homepage": "https://nrc-no.github.io/nrc-design-system/",
   "scripts": {
     "postinstall": "expo-yarn-workspaces postinstall",
     "start": "expo start",
