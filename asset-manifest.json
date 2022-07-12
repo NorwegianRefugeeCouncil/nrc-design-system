@@ -1,18 +1,18 @@
 {
   "files": {
-    "app.js": "/nrc-no/nrc-design-system/static/js/app.26c9fecf.chunk.js",
-    "app.js.map": "/nrc-no/nrc-design-system/static/js/app.26c9fecf.chunk.js.map",
+    "app.js": "/nrc-no/nrc-design-system/static/js/app.322f914b.chunk.js",
+    "app.js.map": "/nrc-no/nrc-design-system/static/js/app.322f914b.chunk.js.map",
     "runtime~app.js": "/nrc-no/nrc-design-system/static/js/runtime~app.740597d1.js",
     "runtime~app.js.map": "/nrc-no/nrc-design-system/static/js/runtime~app.740597d1.js.map",
-    "static/js/2.f18c8ce3.chunk.js": "/nrc-no/nrc-design-system/static/js/2.f18c8ce3.chunk.js",
-    "static/js/2.f18c8ce3.chunk.js.map": "/nrc-no/nrc-design-system/static/js/2.f18c8ce3.chunk.js.map",
+    "static/js/2.bb4cb5c6.chunk.js": "/nrc-no/nrc-design-system/static/js/2.bb4cb5c6.chunk.js",
+    "static/js/2.bb4cb5c6.chunk.js.map": "/nrc-no/nrc-design-system/static/js/2.bb4cb5c6.chunk.js.map",
     "favicon-16.png": "/nrc-no/nrc-design-system/favicon-16.png",
     "favicon-32.png": "/nrc-no/nrc-design-system/favicon-32.png",
     "favicon.ico": "/nrc-no/nrc-design-system/favicon.ico",
     "index.html": "/nrc-no/nrc-design-system/index.html",
     "manifest.json": "/nrc-no/nrc-design-system/manifest.json",
     "serve.json": "/nrc-no/nrc-design-system/serve.json",
-    "static/js/2.f18c8ce3.chunk.js.LICENSE.txt": "/nrc-no/nrc-design-system/static/js/2.f18c8ce3.chunk.js.LICENSE.txt",
+    "static/js/2.bb4cb5c6.chunk.js.LICENSE.txt": "/nrc-no/nrc-design-system/static/js/2.bb4cb5c6.chunk.js.LICENSE.txt",
     "static/media/Roboto_100Thin.ttf": "/nrc-no/nrc-design-system/static/media/Roboto_100Thin.1711b41f.ttf",
     "static/media/Roboto_100Thin_Italic.ttf": "/nrc-no/nrc-design-system/static/media/Roboto_100Thin_Italic.026cbce1.ttf",
     "static/media/Roboto_300Light.ttf": "/nrc-no/nrc-design-system/static/media/Roboto_300Light.8be2d148.ttf",
@@ -30,7 +30,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.740597d1.js",
-    "static/js/2.f18c8ce3.chunk.js",
-    "static/js/app.26c9fecf.chunk.js"
+    "static/js/2.bb4cb5c6.chunk.js",
+    "static/js/app.322f914b.chunk.js"
   ]
 }
