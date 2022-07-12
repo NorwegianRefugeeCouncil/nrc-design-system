@@ -1,20 +1,12 @@
 {
+  "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "module": "esnext",
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "target": "ES5",
-    "lib": [
-      "ES6",
-      "DOM",
-      "ES2015",
-      "ES2016",
-      "ES2017"
-    ],
-    "typeRoots": [
-      "./node_modules/@types",
-      "./design-system/src/types"
-    ],
+    "lib": ["ES6", "DOM", "ES2015", "ES2016", "ES2017"],
+    "typeRoots": ["./node_modules/@types", "./design-system/src/types"],
     "declaration": true,
     "outDir": "design-system/lib/esm",
     "jsx": "react",
@@ -28,9 +20,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": [
-    "design-system/src/**/*"
-  ],
+  "include": ["design-system/src/**/*"],
   "exclude": [
     "storybook",
     "assets",
@@ -41,5 +31,4 @@
     "design-system/src/reportWebVitals.js",
     "design-system/src/setupTests.js"
   ],
-  "extends": "expo/tsconfig.base"
 }
