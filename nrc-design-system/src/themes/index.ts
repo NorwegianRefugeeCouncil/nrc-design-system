@@ -13,7 +13,7 @@ import FormControlLabel from './FormControlLabel';
 import Checkbox from './Checkbox';
 import Link from './Link';
 
-export default extendTheme({
+const theme = extendTheme({
   colors: tokens.colors,
   fontConfig: tokens.fontConfig,
   fontSizes: tokens.fontSizes,
@@ -59,3 +59,6 @@ export default extendTheme({
   },
   radii: tokens.radii,
 });
+
+
+export default theme;

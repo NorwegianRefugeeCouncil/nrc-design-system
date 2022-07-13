@@ -1,0 +1,69 @@
+Arguments: 
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js start
+
+PATH: 
+  /home/irena/.gvm/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/irena/Documents/nrc/nrc-design-system/nrc-storybook/package.json: Unexpected token c in JSON at position 1151
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "nrc-storybook",
+    "private": true,
+    "version": "0.0.1",
+    "main": "nrc-storybook/node_modules/expo/AppEntry.js",
+    "homepage": "https://nrc-no.github.io/nrc-design-system/",
+    "dependencies": {
+      "@expo-google-fonts/roboto": "^0.2.0",
+      "expo": "^44.0.0",
+      "expo-font": "~10.0.4",
+      "expo-status-bar": "~1.2.0",
+      "native-base": "^3.2",
+      "nrc-design-system": "*",
+      "react": "17.0.1",
+      "react-dom": "17.0.1",
+      "react-native": "0.64.3",
+      "react-native-safe-area-context": "3.3.2",
+      "react-native-svg": "12.1.1",
+      "react-native-web": "0.17.1"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.9",
+      "@storybook/addon-actions": "~5.3",
+      "@storybook/addon-knobs": "~5.3",
+      "@storybook/addon-links": "~5.3",
+      "@storybook/addon-ondevice-actions": "~5.3.23",
+      "@storybook/addon-ondevice-knobs": "~5.3.25",
+      "@storybook/react-native": "~5.3.25",
+      "@storybook/react-native-server": "~5.3.23",
+      "@types/react": "~17.0.21",
+      "@types/react-native": "~0.64.12",
+      "babel-loader": "8.1.0",
+      "expo-yarn-workspaces": "^1.6.0",
+      "gh-pages": "^3.2.3",
+      "typescript": "~4.3.5"
+    }
+  }
+  
+  cyan.600
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
