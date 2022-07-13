@@ -4,17 +4,6 @@
   "version": "0.0.1",
   "main": "nrc-storybook/node_modules/expo/AppEntry.js",
   "homepage": "https://nrc-no.github.io/nrc-design-system/",
-  "scripts": {
-    "postinstall": "expo-yarn-workspaces postinstall",
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject",
-    "storybook": "start-storybook -p 7007",
-    "deploy": "gh-pages -d web-build",
-    "predeploy": "expo build:web"
-  },
   "dependencies": {
     "@expo-google-fonts/roboto": "^0.2.0",
     "expo": "^44.0.0",
