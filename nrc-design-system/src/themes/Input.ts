@@ -4,12 +4,15 @@ const disabledStyle = {
   borderColor: 'neutral.200',
   backgroundColor: 'neutral.100',
   color: 'neutral.200',
+  borderWidth: 1,
 };
 
 const activeStyle = {
   borderColor: 'primary.500',
   backgroundColor: 'secondary.100',
   color: 'neutral.500',
+  _hover: { borderColor: 'primary.500' },
+  borderWidth: 1,
 };
 
 export default {
