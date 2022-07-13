@@ -1,3 +1,5 @@
+import { IconNames } from '../types/icons';
+
 import colors from './colors';
 import spacing from './spacing';
 import typography from './typography';
@@ -8,4 +10,5 @@ export default {
   spacing,
   ...typography,
   radii,
+  iconNames: IconNames,
 };

@@ -2,14 +2,14 @@ export default {
   fontConfig: {
     Roboto: {
       400: {
-        normal: 'Roboto_400Regular',
-        italic: 'Roboto_400Regular_Italic',
+        normal: 'Roboto400Regular',
+        italic: 'Roboto400RegularItalic',
       },
       500: {
-        normal: 'Roboto_500Medium',
+        normal: 'Roboto500Medium',
       },
       700: {
-        normal: 'Roboto_700Bold',
+        normal: 'Roboto700Bold',
       },
     },
   },

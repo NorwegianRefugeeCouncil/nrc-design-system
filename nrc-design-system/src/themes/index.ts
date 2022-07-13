@@ -1,17 +1,17 @@
-import { extendTheme } from "native-base";
+import { extendTheme } from 'native-base';
 
-import tokens from "../tokens";
+import tokens from '../tokens';
 
-import Alert from "./Alert";
-import Button from "./Button";
-import Icon from "./Icon";
-import Input from "./Input";
-import Text from "./Text";
-import FormControlErrorMessage from "./FormControlErrorMessage";
-import FormControlHelperText from "./FormControlHelperText";
-import FormControlLabel from "./FormControlLabel";
-import Checkbox from "./Checkbox";
-import Link from "./Link";
+import Alert from './Alert';
+import Button from './Button';
+import Icon from './Icon';
+import Input from './Input';
+import Text from './Text';
+import FormControlErrorMessage from './FormControlErrorMessage';
+import FormControlHelperText from './FormControlHelperText';
+import FormControlLabel from './FormControlLabel';
+import Checkbox from './Checkbox';
+import Link from './Link';
 
 export default extendTheme({
   colors: tokens.colors,

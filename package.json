@@ -3,5 +3,45 @@
   "workspaces": [
     "nrc-design-system",
     "nrc-storybook"
-  ]
+  ],
+  "scripts": {
+    "lint": "eslint --ext js,ts,tsx .",
+    "lint:fix": "eslint --ext js,ts,tsx --fix .",
+    "start": "cd nrc-storybook && expo start",
+    "postinstall": "cd nrc-storybook && expo-yarn-workspaces postinstall",
+    "android": "cd nrc-storybook && expo start --android",
+    "ios": "cd nrc-storybook && expo start --ios",
+    "web": "cd nrc-storybook && expo start --web",
+    "eject": "cd nrc-storybook && expo eject",
+    "storybook": "cd nrc-storybook && start-storybook -p 7007",
+    "deploy": "cd nrc-storybook && gh-pages -d web-build",
+    "predeploy": "cd nrc-storybook && expo build:web",
+    "build": "cd nrc-design-system && yarn build:esm && yarn build:cjs",
+    "build:esm": "cd nrc-design-system && tsc",
+    "build:cjs": "cd nrc-design-system && tsc --module commonjs --outDir lib/cjs"
+  },
+  "lint-staged": {
+    "{apps,packages}/*/src/**/*.{js,ts,jsx,tsx}": [
+      "eslint --ext js,ts,tsx —-fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "8.19.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-import-resolver-webpack": "0.13.2",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-eslint": "^11.0.0",
+    "prettycli": "^1.4.3"
+  }
 }

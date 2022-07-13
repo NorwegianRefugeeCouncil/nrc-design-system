@@ -1,29 +1,29 @@
-import React from "react";
-import { action } from "@storybook/addon-actions";
-import { storiesOf } from "@storybook/react-native";
-import { boolean, select, text } from "@storybook/addon-knobs";
-import { Button, HStack, VStack } from "native-base";
-import { Icon, icons } from "nrc-design-system";
+import React from 'react';
+import { action } from '@storybook/addon-actions';
+import { storiesOf } from '@storybook/react-native';
+import { boolean, select, text } from '@storybook/addon-knobs';
+import { Button, HStack, VStack } from 'native-base';
+import { Icon, tokens } from 'nrc-design-system';
 
-import CenterView from "../CenterView";
+import CenterView from '../CenterView';
 
-const IconNameList = Object.keys(icons);
+const IconNameList = Object.keys(tokens.iconNames);
 
-storiesOf("Button", module)
+storiesOf('Button', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
-  .add("Overview", () => {
+  .add('Overview', () => {
     return (
       <VStack space={4}>
         <HStack space={2}>
           <Button
-            onPress={action("clicked-text")}
+            onPress={action('clicked-text')}
             colorScheme="primary"
             variant="major"
           >
             Primary Major
           </Button>
           <Button
-            onPress={action("clicked-text")}
+            onPress={action('clicked-text')}
             colorScheme="secondary"
             variant="major"
           >
@@ -32,14 +32,14 @@ storiesOf("Button", module)
         </HStack>
         <HStack space={2}>
           <Button
-            onPress={action("clicked-text")}
+            onPress={action('clicked-text')}
             colorScheme="primary"
             variant="minor"
           >
             Primary Minor
           </Button>
           <Button
-            onPress={action("clicked-text")}
+            onPress={action('clicked-text')}
             colorScheme="secondary"
             variant="minor"
           >
@@ -48,7 +48,7 @@ storiesOf("Button", module)
         </HStack>
         <HStack space={2}>
           <Button
-            onPress={action("clicked-text")}
+            onPress={action('clicked-text')}
             colorScheme="primary"
             isDisabled
             variant="major"
@@ -56,13 +56,13 @@ storiesOf("Button", module)
             Disabled
           </Button>
           <Button
-            onPress={action("clicked-text")}
+            onPress={action('clicked-text')}
             colorScheme="primary"
             variant="major"
             startIcon={
               <Icon
                 size="5"
-                name={select("icon name", IconNameList, IconNameList[0])}
+                name={select('icon name', IconNameList, IconNameList[0])}
               />
             }
           >
@@ -72,38 +72,38 @@ storiesOf("Button", module)
       </VStack>
     );
   })
-  .add("Basic Button", () => {
+  .add('Basic Button', () => {
     return (
       <Button
-        onPress={action("clicked-text")}
+        onPress={action('clicked-text')}
         colorScheme={select(
-          "Color scheme",
-          ["primary", "secondary"],
-          "primary"
+          'Color scheme',
+          ['primary', 'secondary'],
+          'primary',
         )}
-        isDisabled={boolean("disabled", false)}
-        variant={select("Variant", ["major", "minor"], "major")}
+        isDisabled={boolean('disabled', false)}
+        variant={select('Variant', ['major', 'minor'], 'major')}
       >
-        {text("Button text", "Submit")}
+        {text('Button text', 'Submit')}
       </Button>
     );
   })
-  .add("Button with Icon", () => {
+  .add('Button with Icon', () => {
     return (
       <Button
-        onPress={action("clicked-text")}
+        onPress={action('clicked-text')}
         colorScheme={select(
-          "Color scheme",
-          ["primary", "secondary"],
-          "primary"
+          'Color scheme',
+          ['primary', 'secondary'],
+          'primary',
         )}
-        isDisabled={boolean("disabled", false)}
-        variant={select("Variant", ["major", "minor"], "major")}
+        isDisabled={boolean('disabled', false)}
+        variant={select('Variant', ['major', 'minor'], 'major')}
         startIcon={
-          <Icon name={select("icon name", IconNameList, IconNameList[0])} />
+          <Icon name={select('icon name', IconNameList, IconNameList[0])} />
         }
       >
-        {text("Button text", "Submit")}
+        {text('Button text', 'Submit')}
       </Button>
     );
   });
