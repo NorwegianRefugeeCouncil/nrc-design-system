@@ -1,18 +1,18 @@
 {
   "files": {
-    "app.js": "/nrc-design-system/static/js/app.322f914b.chunk.js",
-    "app.js.map": "/nrc-design-system/static/js/app.322f914b.chunk.js.map",
+    "app.js": "/nrc-design-system/static/js/app.5ed4ac21.chunk.js",
+    "app.js.map": "/nrc-design-system/static/js/app.5ed4ac21.chunk.js.map",
     "runtime~app.js": "/nrc-design-system/static/js/runtime~app.3bf89ef8.js",
     "runtime~app.js.map": "/nrc-design-system/static/js/runtime~app.3bf89ef8.js.map",
-    "static/js/2.bb4cb5c6.chunk.js": "/nrc-design-system/static/js/2.bb4cb5c6.chunk.js",
-    "static/js/2.bb4cb5c6.chunk.js.map": "/nrc-design-system/static/js/2.bb4cb5c6.chunk.js.map",
+    "static/js/2.283c2f44.chunk.js": "/nrc-design-system/static/js/2.283c2f44.chunk.js",
+    "static/js/2.283c2f44.chunk.js.map": "/nrc-design-system/static/js/2.283c2f44.chunk.js.map",
     "favicon-16.png": "/nrc-design-system/favicon-16.png",
     "favicon-32.png": "/nrc-design-system/favicon-32.png",
     "favicon.ico": "/nrc-design-system/favicon.ico",
     "index.html": "/nrc-design-system/index.html",
     "manifest.json": "/nrc-design-system/manifest.json",
     "serve.json": "/nrc-design-system/serve.json",
-    "static/js/2.bb4cb5c6.chunk.js.LICENSE.txt": "/nrc-design-system/static/js/2.bb4cb5c6.chunk.js.LICENSE.txt",
+    "static/js/2.283c2f44.chunk.js.LICENSE.txt": "/nrc-design-system/static/js/2.283c2f44.chunk.js.LICENSE.txt",
     "static/media/Roboto_100Thin.ttf": "/nrc-design-system/static/media/Roboto_100Thin.1711b41f.ttf",
     "static/media/Roboto_100Thin_Italic.ttf": "/nrc-design-system/static/media/Roboto_100Thin_Italic.026cbce1.ttf",
     "static/media/Roboto_300Light.ttf": "/nrc-design-system/static/media/Roboto_300Light.8be2d148.ttf",
@@ -30,7 +30,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.3bf89ef8.js",
-    "static/js/2.bb4cb5c6.chunk.js",
-    "static/js/app.322f914b.chunk.js"
+    "static/js/2.283c2f44.chunk.js",
+    "static/js/app.5ed4ac21.chunk.js"
   ]
 }
