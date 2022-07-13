@@ -3,11 +3,11 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react-native';
 import { boolean, select, text } from '@storybook/addon-knobs';
 import { Button, HStack, VStack } from 'native-base';
-import { Icon, icons } from 'nrc-design-system';
+import { Icon, tokens } from 'nrc-design-system';
 
 import CenterView from '../CenterView';
 
-const IconNameList = Object.keys(icons);
+const IconNameList = Object.keys(tokens.iconNames);
 
 storiesOf('Button', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)

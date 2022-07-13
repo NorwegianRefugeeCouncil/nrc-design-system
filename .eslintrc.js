@@ -106,5 +106,11 @@ module.exports = {
     ],
     'react/state-in-constructor': 'off',
     'react/static-property-placement': 'off',
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: ['arrow-function', 'function-declaration'],
+      },
+    ],
   },
 };

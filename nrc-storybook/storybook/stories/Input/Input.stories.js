@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 import { VStack, Input, FormControl } from 'native-base';
-import { Icon } from 'nrc-design-system';
+import { Icon, tokens } from 'nrc-design-system';
 
 import CenterView from '../CenterView';
 
@@ -28,7 +28,7 @@ storiesOf('Input', module)
             value="Valid value"
             InputRightElement={
               <Icon
-                name="circleSuccess"
+                name={tokens.iconNames.CircleSuccess}
                 size="6"
                 color="signalSuccess"
                 mr={3}
@@ -43,7 +43,12 @@ storiesOf('Input', module)
             placeholder="This is an invalid input"
             value="Invalid value"
             InputRightElement={
-              <Icon name="circleError" size="6" color="signalDanger" mr={3} />
+              <Icon
+                name={tokens.iconNames.CircleError}
+                size="6"
+                color="signalDanger"
+                mr={3}
+              />
             }
           />
           <FormControl.ErrorMessage>

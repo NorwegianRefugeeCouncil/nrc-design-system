@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react-native';
 import React from 'react';
-import { icons, theme, tokens, Icon } from 'nrc-design-system';
+import { theme, tokens, Icon } from 'nrc-design-system';
 import { select } from '@storybook/addon-knobs';
 import { Box } from 'native-base';
 
@@ -9,7 +9,7 @@ import CenterView from '../CenterView';
 storiesOf('Icon', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
   .add('Icon, Overview', () => {
-    const IconNameList = Object.keys(icons);
+    const IconNameList = Object.keys(tokens.iconNames);
 
     return (
       <Box
@@ -41,7 +41,7 @@ storiesOf('Icon', module)
     );
   })
   .add('Icon', () => {
-    const IconNameList = Object.keys(icons);
+    const IconNameList = Object.keys(tokens.iconNames);
 
     return (
       <Icon

@@ -12,7 +12,6 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "storybook": "start-storybook -p 7007",
-    "build-storybook": "build-storybook",
     "deploy": "gh-pages -d web-build",
     "predeploy": "expo build:web"
   },
