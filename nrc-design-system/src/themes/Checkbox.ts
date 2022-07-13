@@ -29,7 +29,6 @@ export default {
         backgroundColor: 'primary.500',
         name: 'check',
         color: 'white',
-        viewBox: '-2 -2 18 18',
       },
     },
     _disabled: {
