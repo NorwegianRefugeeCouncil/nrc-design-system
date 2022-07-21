@@ -1,11 +1,12 @@
 {
-  "name": "design-system2",
-  "version": "1.0.0",
+  "name": "nrc-design-system",
+  "version": "0.1.2",
   "private": false,
   "main": "node_modules/expo/AppEntry.js",
   "module": "lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
   "files": ["lib"],
+  "homepage": "https://nrc-no.github.io/nrc-design-system/",
   "scripts": {
     "lint": "eslint --ext js,ts,tsx .",
     "lint:fix": "eslint --ext js,ts,tsx --fix .",
@@ -21,7 +22,9 @@
     "build-storybook": "build-storybook",
     "build": "yarn build:esm && yarn build:cjs",
     "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir lib/cjs"
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "deploy": "cd nrc-storybook && gh-pages -d web-build",
+    "predeploy": "cd nrc-storybook && expo build:web"
   },
   "dependencies": {
     "@emotion/core": "~10.0.27",
@@ -29,15 +32,15 @@
     "@react-native-async-storage/async-storage": "~1.15.0",
     "@react-native-community/datetimepicker": "4.0.0",
     "@react-native-community/slider": "4.1.12",
-    "@storybook/addon-essentials": "~6.3",
-    "@storybook/addon-links": "~6.3",
-    "@storybook/addon-react-native-web": "~0.0.18",
     "@storybook/addon-actions": "~6.3",
     "@storybook/addon-controls": "~6.3",
+    "@storybook/addon-essentials": "~6.3",
+    "@storybook/addon-links": "~6.3",
     "@storybook/addon-ondevice-actions": "next",
     "@storybook/addon-ondevice-backgrounds": "next",
     "@storybook/addon-ondevice-controls": "next",
     "@storybook/addon-ondevice-notes": "next",
+    "@storybook/addon-react-native-web": "~0.0.18",
     "@storybook/addons": "~6",
     "@storybook/api": "~6",
     "@storybook/components": "~6.3.0",
@@ -47,12 +50,12 @@
     "expo-status-bar": "~1.2.0",
     "expo": "~44.0.0",
     "native-base": "~3.3",
-    "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-native": "~0.64.3",
     "react-native-safe-area-context": "~3.3.2",
     "react-native-svg": "~12.1.1",
-    "react-native-web": "~0.17.5"
+    "react-native-web": "~0.17.5",
+    "react-native": "~0.64.3",
+    "react": "17.0.1"
   },
   "devDependencies": {
     "@babel/core": "~7.16.0",
@@ -62,15 +65,11 @@
     "@testing-library/jest-dom": "~5.11.4",
     "@testing-library/react": "~11.1.0",
     "@testing-library/user-event": "~12.1.10",
-    "@types/react": "~17.0.1",
     "@types/react-dom": "~17.0.1",
     "@types/react-native": "~0.64",
+    "@types/react": "~17.0.1",
     "babel-loader": "~8.2.5",
     "babel-plugin-react-native-web": "~0.17.5",
-    "react-scripts": "4.0.3",
-    "typescript": "~4.7.4",
-    "webpack": "~2",
-    "eslint": "8.19.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.5.0",
     "eslint-import-resolver-typescript": "^2.3.0",
@@ -80,18 +79,27 @@
     "eslint-plugin-jest": "^26.5.3",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.0.8",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint": "8.19.0",
+    "gh-pages": "^3.2.3",
     "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
     "prettier-eslint": "^11.0.0",
-    "prettycli": "^1.4.3"
+    "prettier": "^2.7.1",
+    "prettycli": "^1.4.3",
+    "react-scripts": "4.0.3",
+    "typescript": "~4.7.4",
+    "webpack": "~2"
   },
   "peerDependencies": {
     "native-base": "~3.4.9",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3"
+  },
+  "resolutions": {
+    "@types/react": "17.0.1",
+    "@types/react-dom": "17.0.1"
   },
   "lint-staged": {
     "{apps,packages}/*/src/**/*.{js,ts,jsx,tsx}": [
@@ -110,9 +118,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-    "resolutions": {
-    "@types/react": "17.0.1",
-    "@types/react-dom": "17.0.1"
   }
 }

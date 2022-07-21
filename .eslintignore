@@ -1,6 +1,9 @@
-node_modules/
-.expo
-dist/
+node_modules
+dist
+build
+**/lib
+__generated__
+.expo/
 npm-debug.*
 *.jks
 *.p8
@@ -9,16 +12,14 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+nrc-storybook/storybook/index.js
+webpack.config.js
+babel.config.js
 
-__generated__
 
 # macOS
 .DS_Store
 
-.idea
-.vscode
-
-# dependencies
 /.pnp
 .pnp.js
 
@@ -27,7 +28,6 @@ __generated__
 
 # production
 /public
-/lib
 
 # misc
 .DS_Store
