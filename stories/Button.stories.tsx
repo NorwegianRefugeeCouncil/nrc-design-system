@@ -2,20 +2,26 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import { Button } from 'native-base';
 
-const MyButtonMeta: ComponentMeta<typeof Button> = {
-  title: 'MyButton2',
+const ButtonMeta: ComponentMeta<typeof Button> = {
+  title: 'Button',
   component: Button,
   argTypes: {
     onPress: { action: 'pressed the button' },
-  },
-  args: {
-    variant: 'major',
-    colorScheme: 'secondary',
-  },
+  }
 };
 
-export default MyButtonMeta;
+export default ButtonMeta;
 
-type MyButtonStory = ComponentStory<typeof Button>;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Basic: MyButtonStory = (args) => <Button {...args}>Button</Button>;
+export const PrimaryMajor = Template.bind({});
+PrimaryMajor.args = { variant: 'major', colorScheme: 'primary' };
+
+export const SecondaryMajor = Template.bind({});
+SecondaryMajor.args = { variant: 'major', colorScheme: 'secondary' };
+
+export const PrimaryMinor = Template.bind({});
+PrimaryMinor.args = { variant: 'minor', colorScheme: 'primary' };
+
+export const SecondaryMinor = Template.bind({});
+SecondaryMinor.args = { variant: 'minor', colorScheme: 'secondary' };
