@@ -16,6 +16,7 @@ nrc-storybook/storybook/index.js
 webpack.config.js
 babel.config.js
 
+storybook-static
 
 # macOS
 .DS_Store

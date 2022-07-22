@@ -40,5 +40,4 @@
     "lib",
     "stories"
   ],
-  "extends": "expo/tsconfig.base"
 }

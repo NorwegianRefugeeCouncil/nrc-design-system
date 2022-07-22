@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "design-system2",
-    "slug": "design-system2",
-    "version": "1.0.0",
+    "name": "nrc-design-system",
+    "slug": "nrc-design-system",
+    "version": "0.1.2",
     "orientation": "portrait",
-    "icon": "./src/assets/icon.png",
+    "icon": "./static/nrc_logo.png",
     "splash": {
-      "image": "./src/assets/splash.png",
+      "image": "./static/nrc_logo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#EAE7DD"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,12 +21,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./src/assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./static/nrc_logo.png",
+        "backgroundColor": "#EAE7DD"
       }
     },
     "web": {
-      "favicon": "./src/assets/favicon.png"
+      "favicon": "./static/nrc_logo.png"
     }
   }
 }

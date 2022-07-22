@@ -12,6 +12,8 @@ web-build/
 
 __generated__
 
+storybook-static
+
 # macOS
 .DS_Store
 
