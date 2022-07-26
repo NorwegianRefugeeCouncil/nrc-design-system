@@ -31,8 +31,13 @@ try {
 
 const getStories = () => {
   return [
+    require("../stories/Alert.stories.tsx"),
     require("../stories/Button.stories.tsx"),
     require("../stories/DateTimePicker.stories.tsx"),
+    require("../stories/Icon.stories.tsx"),
+    require("../stories/Input.stories.tsx"),
+    require("../stories/Text.stories.tsx"),
+    require("../stories/TextArea.stories.tsx"),
   ];
 };
 

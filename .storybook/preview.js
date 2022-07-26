@@ -1,7 +1,6 @@
-import {withBackgrounds} from '@storybook/addon-ondevice-backgrounds';
+import { withBackgrounds } from '@storybook/addon-ondevice-backgrounds';
 import { NativeBaseProvider } from 'native-base';
-import {theme} from '../src';
-import { addParameters } from "@storybook/react";
+import { theme } from '../src';
 import {
   Roboto_400Regular as Roboto400Regular,
   Roboto_400Regular_Italic as Roboto400RegularItalic,
@@ -10,7 +9,7 @@ import {
   useFonts,
 } from '@expo-google-fonts/roboto';
 
-addParameters({
+export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   backgrounds: {
     default: 'light',
@@ -25,10 +24,9 @@ addParameters({
       date: /Date$/,
     },
   },
-});
+};
 
 const themeAndFontDecorator = (Story) => {
-
   useFonts({
     Roboto400Regular,
     Roboto400RegularItalic,

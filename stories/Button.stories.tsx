@@ -28,9 +28,16 @@ PrimaryMinor.args = { variant: 'minor', colorScheme: 'primary' };
 export const SecondaryMinor = Template.bind({});
 SecondaryMinor.args = { variant: 'minor', colorScheme: 'secondary' };
 
-export const SecondaryMinorDisabled = Template.bind({});
-SecondaryMinorDisabled.args = {
+export const MajorDisabled = Template.bind({});
+MajorDisabled.args = {
+  variant: 'major',
+  colorScheme: 'secondary',
+  isDisabled: true,
+};
+
+export const MinorDisabled = Template.bind({});
+MinorDisabled.args = {
   variant: 'minor',
   colorScheme: 'secondary',
-  disabled: true,
+  isDisabled: true,
 };

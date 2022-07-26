@@ -9,6 +9,6 @@ module.exports = {
     "@storybook/addon-react-native-web",
     "@storybook/addon-backgrounds"
   ],
-  staticDirs: ['../static'],
+  staticDirs: ['./static'],
   framework: "@storybook/react",
 };
