@@ -24,10 +24,16 @@ if (parameters) {
   addParameters(parameters);
 }
 
-argsEnhancers.forEach((enhancer) => addArgsEnhancer(enhancer));
+// temporary fix for https://github.com/storybookjs/react-native/issues/327 whilst the issue is investigated
+try {
+  argsEnhancers.forEach((enhancer) => addArgsEnhancer(enhancer));
+} catch {}
 
 const getStories = () => {
-  return [require("../stories/Button.stories.js")];
+  return [
+    require("../stories/Button.stories.tsx"),
+    require("../stories/DateTimePicker.stories.tsx"),
+  ];
 };
 
 configure(getStories, module, false);

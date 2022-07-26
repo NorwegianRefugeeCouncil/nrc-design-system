@@ -1,6 +1,13 @@
 import { withBackgrounds } from '@storybook/addon-ondevice-backgrounds';
 import { NativeBaseProvider } from 'native-base';
 import { theme } from '../src';
+import {
+  Roboto_400Regular as Roboto400Regular,
+  Roboto_400Regular_Italic as Roboto400RegularItalic,
+  Roboto_500Medium as Roboto500Medium,
+  Roboto_700Bold as Roboto700Bold,
+  useFonts,
+} from '@expo-google-fonts/roboto';
 
 export const parameters = {
   backgrounds: [
@@ -9,23 +16,30 @@ export const parameters = {
   ],
 };
 
+const themeAndFontDecorator = (Story) => {
+  useFonts({
+    Roboto400Regular,
+    Roboto400RegularItalic,
+    Roboto500Medium,
+    Roboto700Bold,
+  });
+
+  return (
+    <NativeBaseProvider theme={theme}>
+      <Story />
+    </NativeBaseProvider>
+  )
+};
+
+
 export const decorators = [
   withBackgrounds,
-  (Story) => (
-    <NativeBaseProvider theme={theme}>
-      <div
-        style={{
-          padding: '3em',
-          display: 'flex',
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '100%',
-          backgroundColor: theme.colors.themeLight
-        }}
-      >
+  (Story) => {
+  
+    return (
+      <NativeBaseProvider theme={theme}>
         <Story />
-      </div> 
-    </NativeBaseProvider>
-  ),
+      </NativeBaseProvider>
+    )
+  }
 ];

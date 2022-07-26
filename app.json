@@ -27,6 +27,7 @@
     },
     "web": {
       "favicon": "./static/nrc_logo.png"
-    }
+    },
+    "androidStatusBar": {"hidden": true}
   }
 }
