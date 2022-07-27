@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "nrc-design-system",
+    "slug": "nrc-design-system",
+    "version": "0.1.2",
+    "orientation": "portrait",
+    "icon": "./static/nrc_logo.png",
+    "splash": {
+      "image": "./static/nrc_logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#EAE7DD"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./static/nrc_logo.png",
+        "backgroundColor": "#EAE7DD"
+      }
+    },
+    "web": {
+      "favicon": "./static/nrc_logo.png"
+    },
+    "androidStatusBar": {"hidden": true}
+  }
+}
