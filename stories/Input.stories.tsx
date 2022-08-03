@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import { FormControl, Input } from 'native-base';
 
 const InputMeta: ComponentMeta<typeof Input> = {
-  title: 'Input',
+  title: 'Components/Input',
   component: Input,
 };
 

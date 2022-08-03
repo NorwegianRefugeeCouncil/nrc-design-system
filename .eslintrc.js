@@ -112,5 +112,6 @@ module.exports = {
         namedComponents: ['arrow-function', 'function-declaration'],
       },
     ],
+    'react/prop-types': 'off',
   },
 };

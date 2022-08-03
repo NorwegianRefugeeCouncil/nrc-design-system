@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import { DateTimePicker } from '../src';
 
 const DateTimePickerMeta: ComponentMeta<typeof DateTimePicker> = {
-  title: 'DateTimePicker',
+  title: 'Components/DateTimePicker',
   component: DateTimePicker,
 };
 
