@@ -1,9 +1,9 @@
 {
-  "background_color": "#ffffff",
+  "background_color": "#EAE7DD",
   "display": "standalone",
   "lang": "en",
-  "name": "storybook",
-  "short_name": "storybook",
+  "name": "nrc-design-system",
+  "short_name": "nrc-design-system",
   "start_url": "/?utm_source=web_app_manifest",
   "orientation": "portrait",
   "icons": [
