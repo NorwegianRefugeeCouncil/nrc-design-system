@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/nrc-design-system/static/js/app.00a29d5a.chunk.js",
-    "app.js.map": "/nrc-design-system/static/js/app.00a29d5a.chunk.js.map",
+    "app.js": "/nrc-design-system/static/js/app.082b6f37.chunk.js",
+    "app.js.map": "/nrc-design-system/static/js/app.082b6f37.chunk.js.map",
     "runtime~app.js": "/nrc-design-system/static/js/runtime~app.3bf89ef8.js",
     "runtime~app.js.map": "/nrc-design-system/static/js/runtime~app.3bf89ef8.js.map",
-    "static/js/2.854dfddb.chunk.js": "/nrc-design-system/static/js/2.854dfddb.chunk.js",
-    "static/js/2.854dfddb.chunk.js.map": "/nrc-design-system/static/js/2.854dfddb.chunk.js.map",
+    "static/js/2.4ab5d586.chunk.js": "/nrc-design-system/static/js/2.4ab5d586.chunk.js",
+    "static/js/2.4ab5d586.chunk.js.map": "/nrc-design-system/static/js/2.4ab5d586.chunk.js.map",
     "fonts/Roboto_100Thin.ttf": "/nrc-design-system/./fonts/Roboto_100Thin.ttf",
     "fonts/Roboto_100Thin_Italic.ttf": "/nrc-design-system/./fonts/Roboto_100Thin_Italic.ttf",
     "fonts/Roboto_300Light.ttf": "/nrc-design-system/./fonts/Roboto_300Light.ttf",
@@ -24,13 +24,13 @@
     "index.html": "/nrc-design-system/index.html",
     "manifest.json": "/nrc-design-system/manifest.json",
     "serve.json": "/nrc-design-system/serve.json",
-    "static/js/2.854dfddb.chunk.js.LICENSE.txt": "/nrc-design-system/static/js/2.854dfddb.chunk.js.LICENSE.txt",
+    "static/js/2.4ab5d586.chunk.js.LICENSE.txt": "/nrc-design-system/static/js/2.4ab5d586.chunk.js.LICENSE.txt",
     "static/media/color-circle.png": "/nrc-design-system/static/media/color-circle.aeee73f0.png",
     "static/media/hsv_triangle_mask.png": "/nrc-design-system/static/media/hsv_triangle_mask.cd409b9d.png"
   },
   "entrypoints": [
     "static/js/runtime~app.3bf89ef8.js",
-    "static/js/2.854dfddb.chunk.js",
-    "static/js/app.00a29d5a.chunk.js"
+    "static/js/2.4ab5d586.chunk.js",
+    "static/js/app.082b6f37.chunk.js"
   ]
 }
