@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import { Button } from 'native-base';
 
 const ButtonMeta: ComponentMeta<typeof Button> = {
-  title: 'Button',
+  title: 'Components/Button',
   component: Button,
   argTypes: {
     onPress: { action: 'pressed the button' },

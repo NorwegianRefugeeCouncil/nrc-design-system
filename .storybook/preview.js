@@ -24,7 +24,11 @@ export const parameters = {
       date: /Date$/,
     },
   },
-};
+  options: {
+    storySort: {
+      order: ['Foundation', '*'], 
+    },
+  },};
 
 const themeAndFontDecorator = (Story) => {
   useFonts({

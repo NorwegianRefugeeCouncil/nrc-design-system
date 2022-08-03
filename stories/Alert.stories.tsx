@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import { Alert } from 'native-base';
 
 const AlertMeta: ComponentMeta<typeof Alert> = {
-  title: 'Alert',
+  title: 'Components/Alert',
   component: Alert,
 };
 

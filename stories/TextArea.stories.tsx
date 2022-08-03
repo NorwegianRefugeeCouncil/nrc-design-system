@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import { FormControl, TextArea } from 'native-base';
 
 const TextAreaMeta: ComponentMeta<typeof TextArea> = {
-  title: 'TextArea',
+  title: 'Components/TextArea',
   component: TextArea,
 };
 

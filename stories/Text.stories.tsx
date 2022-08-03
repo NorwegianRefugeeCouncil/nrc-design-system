@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import { Text, VStack } from 'native-base';
 
 const TextMeta: ComponentMeta<typeof Text> = {
-  title: 'Text',
+  title: 'Foundation/Text',
   component: Text,
 };
 
