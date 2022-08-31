@@ -28,9 +28,10 @@ export const parameters = {
     storySort: {
       order: ['Foundation', '*'], 
     },
-  },};
+  },
+};
 
-const themeAndFontDecorator = (Story) => {
+export const themeAndFontDecorator = (Story) => {
   useFonts({
     Roboto400Regular,
     Roboto400RegularItalic,

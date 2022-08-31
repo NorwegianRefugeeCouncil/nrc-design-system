@@ -1,0 +1,290 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { theme } from '../src';
+
+<Meta title="Foundation/Colors/Color palette" component={Color} parameters={{
+    viewMode: 'docs',
+    previewTabs: { 
+      canvas: { hidden: true } 
+     }
+  }}/>
+
+<style>{`
+  .color_wrapper {
+    display: flex;
+  }
+  .color__item {
+    margin: 5px;
+    padding-right: 20px;
+    border-radius: 3px;
+    position: relative;
+  }
+  .color__box {
+    width: 110px;
+    height: 60px;
+    border-radius: 3px
+  }
+  .color__name {
+    font-size: 14px;
+    color: ${theme.colors.neutral["300"]};
+    font-weight: 600;
+    margin: 10px 0;
+    text-transform: uppercase;
+  }
+  .color__code {
+    font-size: 12px;
+    background-color: ${theme.colors.white};
+    opacity: 0.5;
+    color: ${theme.colors.neutral["400"]};
+    position: absolute;
+    bottom: 40px;
+    left: 5px;
+  }
+
+  .primary-500 { background-color: ${theme.colors.primary["500"]};}
+  .primary-300 { background-color: ${theme.colors.primary["300"]};}
+  .primary-200 { background-color: ${theme.colors.primary["200"]};}
+  .primary-100 { background-color: ${theme.colors.primary["100"]};}
+  .secondary-500 { background-color: ${theme.colors.secondary["500"]};}
+  .secondary-300 { background-color: ${theme.colors.secondary["300"]};}
+  .secondary-200 { background-color: ${theme.colors.secondary["200"]};}
+  .secondary-100 { background-color: ${theme.colors.secondary["100"]};}
+  .secondary-link { background-color: ${theme.colors.secondary.link};}
+  .neutral-500 { background-color: ${theme.colors.neutral["500"]};}
+  .neutral-400 { background-color: ${theme.colors.neutral["400"]};}
+  .neutral-300 { background-color: ${theme.colors.neutral["300"]};}
+  .neutral-200 { background-color: ${theme.colors.neutral["200"]};}
+  .neutral-100 { background-color: ${theme.colors.neutral["100"]};}
+  .tertiary1-500 { background-color: ${theme.colors.tertiary1["500"]};}
+  .tertiary1-100 { background-color: ${theme.colors.tertiary1["100"]};}
+  .tertiary2-500 { background-color: ${theme.colors.tertiary2["500"]};}
+  .tertiary2-100 { background-color: ${theme.colors.tertiary2["100"]};}
+  .tertiary3-500 { background-color: ${theme.colors.tertiary3["500"]};}
+  .tertiary3-100 { background-color: ${theme.colors.tertiary3["100"]};}
+  .tertiary4-500 { background-color: ${theme.colors.tertiary4["500"]};}
+  .tertiary4-100 { background-color: ${theme.colors.tertiary4["100"]};}
+  .theme-light { background-color: ${theme.colors.themeLight};}
+  .theme-dark { background-color: ${theme.colors.themeDark};}
+  .signal-success { background-color: ${theme.colors.signalSuccess};}
+  .signal-danger { background-color: ${theme.colors.signalDanger};}
+`}</style>
+
+# Colors
+
+### Primary
+
+NRC orange is our main color. Although we consider the orange color one of our most important elements of the NRC brand, a tiny bit of restraint is warranted. Just painting everything orange is not an optimal way to showcase the NRC identity.
+
+<div className="color_wrapper">
+  <div className="color__item">
+    <div className="color__box primary-100"></div>
+    <div className="color__name">primary 100</div>
+    <div className="color__code">{theme.colors.primary["100"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box primary-200"></div>
+    <div className="color__name">primary 200</div>
+    <div className="color__code">{theme.colors.primary["200"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box primary-300"></div>
+    <div className="color__name">primary 300</div>
+    <div className="color__code">{theme.colors.primary["300"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box primary-500"></div>
+    <div className="color__name">primary 500</div>
+    <div className="color__code">{theme.colors.primary["500"]}</div>
+  </div>
+</div>
+
+### Secondary
+
+Along with primary colors, it's helpful to have a selection of secondary colors to use in components such as pills, alerts and labels. These secondary colors should be used sparingly or as accents, while the primary color(s) should take precendence.
+
+<div className="color_wrapper">
+  <div className="color__item">
+    <div className="color__box secondary-100"></div>
+    <div className="color__name">secondary 100</div>
+    <div className="color__code">{theme.colors.secondary["100"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box secondary-200"></div>
+    <div className="color__name">secondary 200</div>
+    <div className="color__code">{theme.colors.secondary["200"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box secondary-300"></div>
+    <div className="color__name">secondary 300</div>
+    <div className="color__code">{theme.colors.secondary["300"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box secondary-500"></div>
+    <div className="color__name">secondary 500</div>
+    <div className="color__code">{theme.colors.secondary["500"]}</div>
+  </div>
+</div>
+
+
+##### Secondary Interactive
+
+<div className="color_wrapper">
+  <div className="color__item">
+    <div className="color__box secondary-link"></div>
+    <div className="color__name">secondary link</div>
+    <div className="color__code">{theme.colors.secondary.link}</div>
+  </div>
+</div>
+
+### Tertiary 
+
+This color palette supports and complements the NRC orange. With these colors, you’ll be able to structure content and create infographics. 
+
+##### Tertiary 1
+
+<div className="color_wrapper">
+  <div className="color__item">
+    <div className="color__box tertiary1-500"></div>
+    <div className="color__name">tertiary1 500</div>
+    <div className="color__code">{theme.colors.tertiary1["500"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box tertiary1-100"></div>
+    <div className="color__name">tertiary1 100</div>
+    <div className="color__code">{theme.colors.tertiary1["100"]}</div>
+  </div>
+</div>
+
+##### Tertiary 2
+
+<div className="color_wrapper">
+  <div className="color__item">
+    <div className="color__box tertiary2-500"></div>
+    <div className="color__name">tertiary2 500</div>
+    <div className="color__code">{theme.colors.tertiary2["500"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box tertiary2-100"></div>
+    <div className="color__name">tertiary2 100</div>
+    <div className="color__code">{theme.colors.tertiary2["100"]}</div>
+  </div>
+</div>
+
+##### Tertiary 3
+
+<div className="color_wrapper">
+  <div className="color__item">
+    <div className="color__box tertiary3-500"></div>
+    <div className="color__name">tertiary3 500</div>
+    <div className="color__code">{theme.colors.tertiary3["500"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box tertiary3-100"></div>
+    <div className="color__name">tertiary3 100</div>
+    <div className="color__code">{theme.colors.tertiary3["100"]}</div>
+  </div>
+</div>
+
+##### Tertiary 4
+
+<div className="color_wrapper">
+  <div className="color__item">
+    <div className="color__box tertiary4-500"></div>
+    <div className="color__name">tertiary4 500</div>
+    <div className="color__code">{theme.colors.tertiary4["500"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box tertiary4-100"></div>
+    <div className="color__name">tertiary4 100</div>
+    <div className="color__code">{theme.colors.tertiary4["100"]}</div>
+  </div>
+</div>
+
+### Signals
+
+Signals colors are used to provide visual feedback and/or warnings to users as they use your interface.
+
+<div className="color_wrapper">
+  <div className="color__item">
+    <div className="color__box signal-success"></div>
+    <div className="color__name">signal success</div>
+    <div className="color__code">{theme.colors.signalSuccess}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box signal-danger"></div>
+    <div className="color__name">signal danger</div>
+    <div className="color__code">{theme.colors.signalDanger}</div>
+  </div>
+</div>
+
+### Neutral Colors
+
+These greys are neutral (not tinted), which means that they can work alongside any brand color and don’t draw a user’s attention away from the main focus on a color manipulation task or workflow.
+
+<div className="color_wrapper">
+  <div className="color__item">
+    <div className="color__box neutral-100"></div>
+    <div className="color__name">neutral 100</div>
+    <div className="color__code">{theme.colors.neutral["100"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box neutral-200"></div>
+    <div className="color__name">neutral 200</div>
+    <div className="color__code">{theme.colors.neutral["200"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box neutral-300"></div>
+    <div className="color__name">neutral 300</div>
+    <div className="color__code">{theme.colors.neutral["300"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box neutral-400"></div>
+    <div className="color__name">neutral 400</div>
+    <div className="color__code">{theme.colors.neutral["400"]}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box neutral-500"></div>
+    <div className="color__name">neutral 500</div>
+    <div className="color__code">{theme.colors.neutral["500"]}</div>
+  </div>
+</div>
+
+### Themes
+
+Themes serve as an organizational framework for color in NRC, with each theme based on a specific primary background color. There is one default “light” theme and one default “dark” theme.
+
+<div className="color_wrapper">
+  <div className="color__item">
+    <div className="color__box theme-light"></div>
+    <div className="color__name">theme light</div>
+    <div className="color__code">{theme.colors.themeLight}</div>
+  </div>
+
+  <div className="color__item">
+    <div className="color__box theme-dark"></div>
+    <div className="color__name">theme dark</div>
+    <div className="color__code">{theme.colors.themeDark}</div>
+  </div>
+</div>
+
+
+<Story name="Color palette">
+  {(args, { globals: { locale } }) => {
+    return <Color></Color>;
+  }}
+</Story>

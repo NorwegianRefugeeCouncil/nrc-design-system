@@ -16,22 +16,6 @@ export const parameters = {
   ],
 };
 
-const themeAndFontDecorator = (Story) => {
-  useFonts({
-    Roboto400Regular,
-    Roboto400RegularItalic,
-    Roboto500Medium,
-    Roboto700Bold,
-  });
-
-  return (
-    <NativeBaseProvider theme={theme}>
-      <Story />
-    </NativeBaseProvider>
-  )
-};
-
-
 export const decorators = [
   withBackgrounds,
   (Story) => {

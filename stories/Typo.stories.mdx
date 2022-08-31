@@ -1,0 +1,55 @@
+import { Canvas, Meta, Story, Source, Anchor } from "@storybook/addon-docs";
+
+import {Text} from 'native-base'
+
+
+<Meta
+  title="Foundation/Typography/Base typography"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+### Blockquote
+
+The Blockquote component specifies a section that is quoted from another source.
+
+- We can use <code>blockquote</code> in any component to render the text found within the <code>blockquote tag</code> as indented text
+
+Typographic scale when using blockquote in text component:
+
+<Canvas>
+  <Story name="Display 1">
+    {(args, { globals: { locale } }) => {
+      return (
+        <Text variant={'display'} level={1} {...args}>
+          Display 1
+        </Text>
+      );
+    }}
+  </Story>
+</Canvas>
+
+<Anchor storyId='foundation-typography-basetypography--display1'></Anchor>
+
+### Cite
+
+The Cite component defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).
+
+- We can use <code>cite</code> in any component to render the text found within the <code>cite tag</code>.
+
+Typographic scale when using cite in text component:
+
+<Canvas>
+  <Story name="Display 2">
+    {(args, { globals: { locale } }) => {
+      return <p><Text variant="display" level="2">Display 2</Text></p>;
+    }}
+  </Story>
+</Canvas>
+
+<Anchor storyId='foundation-typography-basetypography--display2'></Anchor>
+
