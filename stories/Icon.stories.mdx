@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { Icon, theme } from '../src';
+import { IconNames } from '../src/types/icons';
+import { Text, VStack } from 'native-base';
+const icons = Object.keys(IconNames)
+
+<Meta
+  title="Foundation/Icons"
+/>
+
+<style>{`
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icons-container > div {
+  align-items: center;
+  background: ${theme.colors.themeLight};
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 5px 10px;
+  padding: 10px 5px;
+  text-align: center;
+  min-width: 28%;
+}
+`}</style>
+
+# Icons
+
+<Canvas>
+  <Story name="All" parameters={{ docs: { source: { code:
+    icons.map((item) => {
+      return (`<Icon name={${item}} />\n`);
+    }).join('')
+    }}}}
+  >
+    <div class='icons-container'>
+      {icons.map((item) => (
+        <div key={item}>
+          <Icon name={item} />
+          <Text variant='caption'>{item}</Text>
+        </div>
+      ))}
+    </div>
+  </Story>
+</Canvas>

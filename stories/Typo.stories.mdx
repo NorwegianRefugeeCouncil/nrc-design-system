@@ -23,48 +23,51 @@ Use Display for the main page title.
 A display is great for when you need to show an important title at the top of more structured and content-heavy pages.
 
 <Canvas>
-  <Story name='Display'>
-    {(args, { globals: { locale } }) => {
-      return (
-        <VStack>
-          <Text variant='display' level='1'>
-            Display Major
-          </Text>
-          <Text variant='display' level='2'>
-            Display Minor
-          </Text>
-        </VStack>
-      );
-    }}
+  <Story
+    name='Display'
+    parameters={{ docs: { source: { code:
+      `<Text variant='display' level='1'>Display Major</Text>\n<Text variant='display' level='2'>Display Minor</Text>`
+    }}}}
+  >
+    <VStack>
+      <Text variant='display' level='1'>
+        Display Major
+      </Text>
+      <Text variant='display' level='2'>
+        Display Minor
+      </Text>
+    </VStack>
   </Story>
 </Canvas>
 
 <Anchor storyId='foundation-typography-basetypography--display'></Anchor>
+
 
 ### Heading
 
 Headings are used to show the content hierarchy and are important for improving the reading experience for our users.
 
 <Canvas>
-  <Story name='Heading'>
-    {(args, { globals: { locale } }) => {
-      return (
-        <VStack>
-          <Text variant='heading' level='1' {...args}>
-            Heading XL
-          </Text>
-          <Text variant='heading' level='2'>
-            Heading L
-          </Text>
-          <Text variant='heading' level='3' {...args}>
-            Heading M
-          </Text>
-          <Text variant='heading' level='4'>
-            Heading S
-          </Text>
-        </VStack>
-      );
-    }}
+  <Story 
+      name='Heading'
+      parameters={{ docs: { source: { code:
+      `<Text variant='heading' level='1'>Heading XL</Text>\n<Text variant='heading' level='2'>Heading L</Text>\n<Text variant='heading' level='3'>Heading M</Text>\n<Text variant='heading' level='4'>Heading S</Text>`
+    }}}}
+  >
+    <VStack>
+      <Text variant='heading' level='1'>
+        Heading XL
+      </Text>
+      <Text variant='heading' level='2'>
+        Heading L
+      </Text>
+      <Text variant='heading' level='3'>
+        Heading M
+      </Text>
+      <Text variant='heading' level='4'>
+        Heading S
+      </Text>
+    </VStack>
   </Story>
 </Canvas>
 
@@ -76,14 +79,15 @@ Headings are used to show the content hierarchy and are important for improving 
 Typically used for long-form writing like long paragraphs.
 
 <Canvas>
-  <Story name='Body'>
-    {(args, { globals: { locale } }) => {
-      return (
-        <Text variant='body' level='1'>
-          Body
-        </Text>
-        );
-    }}
+  <Story
+    name='Body'
+    parameters={{ docs: { source: { code:
+      `<Text variant='body' level='1'>Body</Text>`
+    }}}}
+  >
+    <Text variant='body' level='1'>
+      Body
+    </Text>
   </Story>
 </Canvas>
 
@@ -95,14 +99,15 @@ Typically used for long-form writing like long paragraphs.
 Textfield name
 
 <Canvas>
-  <Story name='Label'>
-    {(args, { globals: { locale } }) => {
-      return (
-        <Text variant='label' level='1'>
-          Label
-        </Text>
-        );
-    }}
+  <Story
+    name='Label'
+    parameters={{ docs: { source: { code:
+      `<Text variant='label' level='1'>Label</Text>`
+    }}}}
+  >
+    <Text variant='label' level='1'>
+      Label
+    </Text>
   </Story>
 </Canvas>
 
@@ -114,19 +119,19 @@ Textfield name
 Input help or error message 
 
 <Canvas>
-  <Story name='Caption'>
-    {(args, { globals: { locale } }) => {
-      return (
-        <Text variant='caption' level='1'>
-          Caption
-        </Text>
-        );
-    }}
+  <Story
+    name='Caption'
+    parameters={{ docs: { source: { code:
+      `<Text variant='caption' level='1'>Caption</Text>`
+    }}}}
+  >
+    <Text variant='caption' level='1'>
+      Caption
+    </Text>
   </Story>
 </Canvas>
 
 <Anchor storyId='foundation-typography-basetypography--caption'></Anchor>
-
 
 
 ### Inline
@@ -134,14 +139,15 @@ Input help or error message
 Links inside body text
 
 <Canvas>
-  <Story name='Inline'>
-    {(args, { globals: { locale } }) => {
-      return (
-        <Text variant='inline' level='1'>
-          Inline
-        </Text>
-        );
-    }}
+  <Story
+    name='Inline'
+    parameters={{ docs: { source: { code:
+      `<Text variant='inline' level='1'>Inline</Text>`
+    }}}}
+  >
+    <Text variant='inline' level='1'>
+      Inline
+    </Text>
   </Story>
 </Canvas>
 
