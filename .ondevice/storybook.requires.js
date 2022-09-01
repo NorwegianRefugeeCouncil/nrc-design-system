@@ -35,13 +35,12 @@ const getStories = () => {
     require("../stories/Button.stories.tsx"),
     require("../stories/Colors.stories.mdx"),
     require("../stories/DateTimePicker.stories.tsx"),
+    require("../stories/Fonts.stories.mdx"),
     require("../stories/Icon.stories.tsx"),
     require("../stories/Icons.stories.tsx"),
     require("../stories/Input.stories.tsx"),
-    require("../stories/Text.stories.tsx"),
     require("../stories/TextArea.stories.tsx"),
     require("../stories/Typo.stories.mdx"),
-    require("../stories/Typography.stories.tsx"),
   ];
 };
 

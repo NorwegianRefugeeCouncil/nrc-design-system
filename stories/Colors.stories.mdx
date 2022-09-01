@@ -12,23 +12,37 @@ import { theme } from '../src';
 <style>{`
   .color_wrapper {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .color_wrapper-row {
+    display: flex;
+    margin-bottom: 10px;
   }
   .color__item {
-    margin: 5px;
+    flex: 1 1 0;
     padding-right: 20px;
     border-radius: 3px;
     position: relative;
   }
+  .color__item--major {
+    padding-right: 20px;
+    width: 100%;
+    border-radius: 3px;
+    position: relative;
+  }
   .color__box {
-    width: 110px;
+    width: 100%;
     height: 60px;
-    border-radius: 3px
+  }
+  .color__box--major {
+    height: 60px;
   }
   .color__name {
     font-size: 14px;
     color: ${theme.colors.neutral["300"]};
     font-weight: 600;
-    margin: 10px 0;
+    margin: 5px 0;
     text-transform: uppercase;
   }
   .color__code {
@@ -37,7 +51,7 @@ import { theme } from '../src';
     opacity: 0.5;
     color: ${theme.colors.neutral["400"]};
     position: absolute;
-    bottom: 40px;
+    top: 5px;
     left: 5px;
   }
 
@@ -76,6 +90,14 @@ import { theme } from '../src';
 NRC orange is our main color. Although we consider the orange color one of our most important elements of the NRC brand, a tiny bit of restraint is warranted. Just painting everything orange is not an optimal way to showcase the NRC identity.
 
 <div className="color_wrapper">
+<div className="color_wrapper-row">
+  <div className="color__item--major">
+    <div className="color__box--major primary-500"></div>
+    <div className="color__name">primary 500</div>
+    <div className="color__code">{theme.colors.primary["500"]}</div>
+  </div>
+</div>
+<div className="color_wrapper-row">
   <div className="color__item">
     <div className="color__box primary-100"></div>
     <div className="color__name">primary 100</div>
@@ -93,12 +115,7 @@ NRC orange is our main color. Although we consider the orange color one of our m
     <div className="color__name">primary 300</div>
     <div className="color__code">{theme.colors.primary["300"]}</div>
   </div>
-
-  <div className="color__item">
-    <div className="color__box primary-500"></div>
-    <div className="color__name">primary 500</div>
-    <div className="color__code">{theme.colors.primary["500"]}</div>
-  </div>
+</div>
 </div>
 
 ### Secondary
@@ -106,6 +123,14 @@ NRC orange is our main color. Although we consider the orange color one of our m
 Along with primary colors, it's helpful to have a selection of secondary colors to use in components such as pills, alerts and labels. These secondary colors should be used sparingly or as accents, while the primary color(s) should take precendence.
 
 <div className="color_wrapper">
+<div className="color_wrapper-row">
+  <div className="color__item--major">
+    <div className="color__box--major secondary-500"></div>
+    <div className="color__name">secondary 500</div>
+    <div className="color__code">{theme.colors.secondary["500"]}</div>
+  </div>
+</div>
+<div className="color_wrapper-row">
   <div className="color__item">
     <div className="color__box secondary-100"></div>
     <div className="color__name">secondary 100</div>
@@ -123,12 +148,7 @@ Along with primary colors, it's helpful to have a selection of secondary colors 
     <div className="color__name">secondary 300</div>
     <div className="color__code">{theme.colors.secondary["300"]}</div>
   </div>
-
-  <div className="color__item">
-    <div className="color__box secondary-500"></div>
-    <div className="color__name">secondary 500</div>
-    <div className="color__code">{theme.colors.secondary["500"]}</div>
-  </div>
+</div>
 </div>
 
 
@@ -148,7 +168,7 @@ This color palette supports and complements the NRC orange. With these colors, y
 
 ##### Tertiary 1
 
-<div className="color_wrapper">
+<div className="color_wrapper-row">
   <div className="color__item">
     <div className="color__box tertiary1-500"></div>
     <div className="color__name">tertiary1 500</div>
@@ -164,7 +184,7 @@ This color palette supports and complements the NRC orange. With these colors, y
 
 ##### Tertiary 2
 
-<div className="color_wrapper">
+<div className="color_wrapper-row">
   <div className="color__item">
     <div className="color__box tertiary2-500"></div>
     <div className="color__name">tertiary2 500</div>
@@ -180,7 +200,7 @@ This color palette supports and complements the NRC orange. With these colors, y
 
 ##### Tertiary 3
 
-<div className="color_wrapper">
+<div className="color_wrapper-row">
   <div className="color__item">
     <div className="color__box tertiary3-500"></div>
     <div className="color__name">tertiary3 500</div>
@@ -196,7 +216,7 @@ This color palette supports and complements the NRC orange. With these colors, y
 
 ##### Tertiary 4
 
-<div className="color_wrapper">
+<div className="color_wrapper-row">
   <div className="color__item">
     <div className="color__box tertiary4-500"></div>
     <div className="color__name">tertiary4 500</div>
@@ -214,7 +234,7 @@ This color palette supports and complements the NRC orange. With these colors, y
 
 Signals colors are used to provide visual feedback and/or warnings to users as they use your interface.
 
-<div className="color_wrapper">
+<div className="color_wrapper-row">
   <div className="color__item">
     <div className="color__box signal-success"></div>
     <div className="color__name">signal success</div>
@@ -232,7 +252,7 @@ Signals colors are used to provide visual feedback and/or warnings to users as t
 
 These greys are neutral (not tinted), which means that they can work alongside any brand color and don’t draw a user’s attention away from the main focus on a color manipulation task or workflow.
 
-<div className="color_wrapper">
+<div className="color_wrapper-row">
   <div className="color__item">
     <div className="color__box neutral-100"></div>
     <div className="color__name">neutral 100</div>
@@ -268,7 +288,7 @@ These greys are neutral (not tinted), which means that they can work alongside a
 
 Themes serve as an organizational framework for color in NRC, with each theme based on a specific primary background color. There is one default “light” theme and one default “dark” theme.
 
-<div className="color_wrapper">
+<div className="color_wrapper-row">
   <div className="color__item">
     <div className="color__box theme-light"></div>
     <div className="color__name">theme light</div>
