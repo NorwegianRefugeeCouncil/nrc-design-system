@@ -26,7 +26,11 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Foundation', '*'], 
+      order: [
+        'Intro',
+        'Foundation',
+        '*'
+      ], 
     },
   },
 };

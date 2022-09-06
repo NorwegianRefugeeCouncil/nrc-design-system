@@ -1,17 +1,25 @@
 import { Meta, Story, Canvas } from "@storybook/addon-docs";
 import { Icon, theme } from '../src';
-import { IconNames } from '../src/types/icons';
+import { IconNames, ActivityIconNames } from '../src/types/icons';
 import { Text, VStack } from 'native-base';
 const icons = Object.keys(IconNames)
+const activityIcons = Object.keys(ActivityIconNames)
 
 <Meta
   title="Foundation/Icons"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
 />
 
 <style>{`
 .icons-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .icons-container > div {
@@ -21,23 +29,32 @@ const icons = Object.keys(IconNames)
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 5px 10px;
   padding: 10px 5px;
   text-align: center;
-  min-width: 28%;
+  flex: 1 1 0;
+  min-width: 150px;
 }
 `}</style>
 
 # Icons
 
+### Default Icons
+
+Based on the Activity Icons and in order to keep all icons consistent, we use the [Remix Icon set](https://remixicon.com/).
+It’s an open-source neutral-style system with rounded outlines, similar to the Activity Icons. They are all clear and minimal.
+
+The Icons components made for Designers have a Frame of 24x24px. This was done to keep the proportions when changing an icon inside a component. This is the only size we are currently using.
+
+Default color is Black #000000 but feel free to use any color of our colors system. 
+
 <Canvas>
-  <Story name="All" parameters={{ docs: { source: { code:
+  <Story name="Default" parameters={{ docs: { source: { code:
     icons.map((item) => {
-      return (`<Icon name={${item}} />\n`);
+      return (`<Icon name={'${item}'} />\n`);
     }).join('')
     }}}}
   >
-    <div class='icons-container'>
+    <div className='icons-container'>
       {icons.map((item) => (
         <div key={item}>
           <Icon name={item} />
@@ -47,3 +64,29 @@ const icons = Object.keys(IconNames)
     </div>
   </Story>
 </Canvas>
+
+
+### Activity Icons
+
+NRC’s six programme activities each have their own symbol. Don’t confuse them for logos – they should never replace the official NRC logo.
+
+More about Activity Icons at the [NRC brand book](https://identity.nrc.no/auth/?referer=%2Fbrand%23/design-guide/activity-symbols)
+<Canvas>
+  <Story name="Activity" parameters={{ docs: { source: { code:
+    activityIcons.map((item) => {
+      return (`<Icon name={'${item}'} />\n`);
+    }).join('')
+    }}}}
+  >
+    <div className='icons-container'>
+      {activityIcons.map((item) => (
+        <div key={item}>
+          <Icon name={item} />
+          <Text variant='caption'>{item}</Text>
+        </div>
+      ))}
+    </div>
+  </Story>
+</Canvas>
+
+<Anchor storyId='foundation-icons--activity'></Anchor>

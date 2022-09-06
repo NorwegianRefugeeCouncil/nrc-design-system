@@ -1,16 +1,16 @@
 import { IIconProps } from 'native-base';
-import { Color } from 'react-native-svg';
+import { SvgProps } from 'react-native-svg';
 
-import { SortAsc } from '../assets/icons/SortAsc';
-import { FileText } from '../assets/icons/FileText';
-
-export enum IconNames {
+export enum ActivityIconNames {
   ActivityCamp = 'ActivityCamp',
   ActivityEducation = 'ActivityEducation',
   ActivityFood = 'ActivityFood',
   ActivityIcla = 'ActivityIcla',
   ActivityShelter = 'ActivityShelter',
   ActivityWash = 'ActivityWash',
+}
+
+export enum IconNames {
   ArrowDown = 'ArrowDown',
   ArrowLeft = 'ArrowLeft',
   ArrowRight = 'ArrowRight',
@@ -27,8 +27,15 @@ export enum IconNames {
 }
 
 export type IconProps = {
-  name: IconNames;
-  customIconProps?: {
-    innerColor?: Color;
-  };
+  name: IconNames | ActivityIconNames;
 } & Omit<IIconProps, 'name'>;
+
+export enum Logos {
+  Horizontal = 'Horizontal',
+  Main = 'Main',
+  Mark = 'Mark',
+}
+
+export type LogoProps = {
+  name: Logos;
+} & SvgProps;

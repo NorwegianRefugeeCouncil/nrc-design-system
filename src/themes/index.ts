@@ -4,14 +4,14 @@ import tokens from '../tokens';
 
 import Alert from './Alert';
 import Button from './Button';
-import Icon from './Icon';
-import Input from './Input';
-import Text from './Text';
+import Checkbox from './Checkbox';
 import FormControlErrorMessage from './FormControlErrorMessage';
 import FormControlHelperText from './FormControlHelperText';
 import FormControlLabel from './FormControlLabel';
-import Checkbox from './Checkbox';
+import Icon from './Icon';
+import Input from './Input';
 import Link from './Link';
+import Text from './Text';
 
 export default extendTheme({
   colors: tokens.colors,
@@ -31,6 +31,7 @@ export default extendTheme({
     Icon,
     Input,
     Link,
+    Logo: {},
     Text,
   },
   space: {

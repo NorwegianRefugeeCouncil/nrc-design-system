@@ -38,6 +38,8 @@ const getStories = () => {
     require("../stories/Fonts.stories.mdx"),
     require("../stories/Icon.stories.mdx"),
     require("../stories/Input.stories.tsx"),
+    require("../stories/Intro.stories.mdx"),
+    require("../stories/Logos.stories.mdx"),
     require("../stories/TextArea.stories.tsx"),
     require("../stories/Typo.stories.mdx"),
   ];

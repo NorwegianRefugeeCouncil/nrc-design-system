@@ -1,4 +1,4 @@
-import { IconNames } from '../types/icons';
+import { ActivityIconNames, IconNames, Logos } from '../types/icons';
 
 import colors from './colors';
 import spacing from './spacing';
@@ -10,5 +10,11 @@ export default {
   spacing,
   ...typography,
   radii,
-  iconNames: IconNames,
+  iconNames: {
+    ...ActivityIconNames,
+    ...IconNames,
+  },
+  logos: {
+    ...Logos,
+  },
 };

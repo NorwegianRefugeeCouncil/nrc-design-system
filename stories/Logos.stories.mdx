@@ -1,0 +1,56 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { Logo, theme } from '../src';
+import { Text, VStack } from 'native-base';
+
+<Meta
+  title="Foundation/Logos"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<style>{`
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.icons-container > div {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+`}</style>
+
+# Logos
+
+Our main logo – the orange square with our acronym and full name – is strong, recognisable, energetic and easy to spot. 
+
+More about Logos at the [NRC brand book](https://identity.nrc.no/auth/?referer=%2Fbrand%23/design-guide/logos-our-most-distinct-mark)
+
+<Canvas>
+  <Story name="Logos">
+    <div className='icons-container'>
+      <div>
+        <Text variant='caption'>Main</Text>
+        <Logo name='Main' height="100px"/>
+      </div>
+      <div>
+        <Text variant='caption'>Horizontal</Text>
+        <Logo name='Horizontal' height="100px"/>
+      </div>
+      <div>
+        <Text variant='caption'>Mark</Text>
+        <Logo name='Mark' height="100px"/>
+      </div>
+    </div>
+  </Story>
+</Canvas>

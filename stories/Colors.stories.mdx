@@ -2,7 +2,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 import { theme } from '../src';
 
-<Meta title="Foundation/Colors/Color palette" component={Color} parameters={{
+<Meta title="Foundation/Colors" component={Color} parameters={{
     viewMode: 'docs',
     previewTabs: { 
       canvas: { hidden: true } 
@@ -150,9 +150,6 @@ Along with primary colors, it's helpful to have a selection of secondary colors 
   </div>
 </div>
 </div>
-
-
-##### Secondary Interactive
 
 <div className="color_wrapper">
   <div className="color__item">
@@ -303,8 +300,6 @@ Themes serve as an organizational framework for color in NRC, with each theme ba
 </div>
 
 
-<Story name="Color palette">
-  {(args, { globals: { locale } }) => {
-    return <Color></Color>;
-  }}
+<Story name="Colors">
+  <Color></Color>
 </Story>
