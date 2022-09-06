@@ -21,7 +21,7 @@ export default create({
   barBg: colorTokens.white,
 
   inputBg: colorTokens.white,
-  inputBorder: colorTokens.primary500,
-  inputTextColor: colorTokens.neutral100,
+  inputBorder: colorTokens.primary200,
+  inputTextColor: colorTokens.neutral500,
   inputBorderRadius: 4,
 });

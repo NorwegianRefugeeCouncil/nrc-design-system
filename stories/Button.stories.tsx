@@ -1,43 +1,48 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
-import { Button } from 'native-base';
+import { Button as ButtonNB } from 'native-base';
 
 const ButtonMeta: ComponentMeta<typeof Button> = {
   title: 'Components/Button',
-  component: Button,
+  component: ButtonNB,
   argTypes: {
-    onPress: { action: 'pressed the button' },
+    text: {
+      control: { type: "text" },
+      defaultValue: 'Button Text'
+    },
+    colorScheme: {
+      options: ["primary", "secondary"],
+      control: { type: "inline-radio" },
+      defaultValue: 'primary',
+    },
+    variant: {
+      options: ["major", "minor"],
+      control: { type: "inline-radio" },
+      defaultValue: 'major'
+    },
+    isDisabled: {
+      control: {type: 'boolean'},
+      defaultValue: false
+    },
+    isHovered: {
+      control: {type: 'boolean'},
+      defaultValue: false
+    },
+    isFocused: {
+      control: {type: 'boolean'},
+      defaultValue: false
+    },
+    isPressed: {
+      control: {type: 'boolean'},
+      defaultValue: false
+    }
   },
 };
 
 export default ButtonMeta;
 
-const Template: ComponentStory<typeof Button> = (args) => (
-  <Button {...args}>Button Text</Button>
-);
+const Template: ComponentStory<typeof ButtonNB> = (args) => (
+  <ButtonNB {...args}>{args.text}</ButtonNB>
+)
 
-export const PrimaryMajor = Template.bind({});
-PrimaryMajor.args = { variant: 'major', colorScheme: 'primary' };
-
-export const SecondaryMajor = Template.bind({});
-SecondaryMajor.args = { variant: 'major', colorScheme: 'secondary' };
-
-export const PrimaryMinor = Template.bind({});
-PrimaryMinor.args = { variant: 'minor', colorScheme: 'primary' };
-
-export const SecondaryMinor = Template.bind({});
-SecondaryMinor.args = { variant: 'minor', colorScheme: 'secondary' };
-
-export const MajorDisabled = Template.bind({});
-MajorDisabled.args = {
-  variant: 'major',
-  colorScheme: 'secondary',
-  isDisabled: true,
-};
-
-export const MinorDisabled = Template.bind({});
-MinorDisabled.args = {
-  variant: 'minor',
-  colorScheme: 'secondary',
-  isDisabled: true,
-};
+export const Button = Template.bind({});

@@ -1,35 +1,49 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
-import { FormControl, TextArea } from 'native-base';
+import { FormControl, TextArea as TextAreaNB } from 'native-base';
 
-const TextAreaMeta: ComponentMeta<typeof TextArea> = {
-  title: 'Components/TextArea',
-  component: TextArea,
+const TextAreaMeta: ComponentMeta<typeof TextAreaNB> = {
+  title: 'Components/Textarea',
+  component: TextAreaNB,
+  argTypes: {
+    value: {
+      control: { type: "text" },
+      defaultValue: 'TextArea Text'
+    },
+    helperText: {
+      control: { type: "text" },
+      defaultValue: 'This is a helpful explanation'
+    },
+    isDisabled: {
+      control: {type: 'boolean'},
+      defaultValue: false
+    },
+    isHovered: {
+      control: {type: 'boolean'},
+      defaultValue: false
+    },
+    isFocused: {
+      control: {type: 'boolean'},
+      defaultValue: false
+    },
+    isReadOnly: {
+      control: {type: 'boolean'},
+      defaultValue: false
+    },
+    isInvalid: {
+      control: {type: 'boolean'},
+      defaultValue: false
+    }
+  },
 };
 
 export default TextAreaMeta;
 
-const Template: ComponentStory<typeof TextArea> = (args) => (
+const Template: ComponentStory<typeof TextAreaNB> = (args) => (
   <FormControl>
     <FormControl.Label>Label</FormControl.Label>
-    <TextArea {...args} />
-    <FormControl.HelperText>Helper text</FormControl.HelperText>
+    <TextAreaNB {...args} />
   </FormControl>
 );
 
-export const Default = Template.bind({});
-
-export const Disabled = Template.bind({});
-Disabled.args = { isDisabled: true, value: 'TextArea value' };
-
-export const Hovered = Template.bind({});
-Hovered.args = { isHovered: true, value: 'TextArea value' };
-
-export const Focused = Template.bind({});
-Focused.args = { isFocused: true, value: 'TextArea value' };
-
-export const Invalid = Template.bind({});
-Invalid.args = { isInvalid: true, value: 'TextArea value' };
-
-export const Password = Template.bind({});
-Password.args = { type: 'password', value: 'TextArea value' };
+export const Textarea = Template.bind({});

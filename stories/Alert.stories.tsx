@@ -1,26 +1,27 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
-import { Alert } from 'native-base';
+import { Alert as AlertNB } from 'native-base';
 
-const AlertMeta: ComponentMeta<typeof Alert> = {
+const AlertMeta: ComponentMeta<typeof AlertNB> = {
   title: 'Components/Alert',
-  component: Alert,
+  component: AlertNB,
+  argTypes: {
+    text: {
+      control: { type: "text" },
+      defaultValue: 'This is an alert'
+    },
+    variant: {
+      options: ["error", "info", "success"],
+      control: { type: "inline-radio" },
+      defaultValue: 'info'
+    },
+  },
 };
 
 export default AlertMeta;
 
-const Template: ComponentStory<typeof Alert> = ({ variant, ...args }) => (
-  <Alert
-    variant={variant}
-    {...args}
-  >{`This is a notification of type ${variant}`}</Alert>
+const Template: ComponentStory<typeof AlertNB> = (args) => (
+  <AlertNB {...args}>{args.text}</AlertNB>
 );
 
-export const Info = Template.bind({});
-Info.args = { variant: 'info' };
-
-export const Success = Template.bind({});
-Success.args = { variant: 'success' };
-
-export const Error = Template.bind({});
-Error.args = { variant: 'error' };
+export const Alert = Template.bind({});
