@@ -7,44 +7,44 @@ const InputMeta: ComponentMeta<typeof InputNB> = {
   component: InputNB,
   argTypes: {
     value: {
-      control: { type: "text" },
-      defaultValue: 'Input Text'
+      control: { type: 'text' },
+      defaultValue: 'Input Text',
     },
     helperText: {
-      control: { type: "text" },
-      defaultValue: 'This is a helpful explanation'
+      control: { type: 'text' },
+      defaultValue: 'This is a helpful explanation',
     },
     isDisabled: {
-      control: {type: 'boolean'},
-      defaultValue: false
+      control: { type: 'boolean' },
+      defaultValue: false,
     },
     isHovered: {
-      control: {type: 'boolean'},
-      defaultValue: false
+      control: { type: 'boolean' },
+      defaultValue: false,
     },
     isFocused: {
-      control: {type: 'boolean'},
-      defaultValue: false
+      control: { type: 'boolean' },
+      defaultValue: false,
     },
     isReadOnly: {
-      control: {type: 'boolean'},
-      defaultValue: false
+      control: { type: 'boolean' },
+      defaultValue: false,
     },
     isInvalid: {
-      control: {type: 'boolean'},
-      defaultValue: false
+      control: { type: 'boolean' },
+      defaultValue: false,
     },
     type: {
-      options: ["text", "password"],
-      control: { type: "inline-radio" },
-      defaultValue: "text"
-    }
+      options: ['text', 'password'],
+      control: { type: 'inline-radio' },
+      defaultValue: 'text',
+    },
   },
 };
 
 export default InputMeta;
 
-const Template: ComponentStory<typeof InputNB> = (args) => (
+const Template: ComponentStory<typeof InputNB> = ({ ...args }) => (
   <FormControl>
     <FormControl.Label>Label</FormControl.Label>
     <InputNB {...args} />

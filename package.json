@@ -26,7 +26,8 @@
     "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
     "storybook": "start-storybook -p 6006",
     "update-stories": "sb-rn-get-stories --config-path .ondevice",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "chromatic": "npx chromatic --project-token=a129fe80d7a1 --storybook-build-dir storybook-static"
   },
   "dependencies": {
     "@expo-google-fonts/roboto": "~0.2.2",
@@ -74,6 +75,7 @@
     "@typescript-eslint/parser": "^5.30.7",
     "babel-loader": "^8.2.3",
     "babel-plugin-react-native-web": "^0.17.5",
+    "chromatic": "^6.9.0",
     "eslint": "8.19.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.5.0",
@@ -114,5 +116,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "nrc-design-system@0.1.2"
 }

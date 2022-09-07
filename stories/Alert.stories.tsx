@@ -7,20 +7,20 @@ const AlertMeta: ComponentMeta<typeof AlertNB> = {
   component: AlertNB,
   argTypes: {
     text: {
-      control: { type: "text" },
-      defaultValue: 'This is an alert'
+      control: { type: 'text' },
+      defaultValue: 'This is an alert',
     },
     variant: {
-      options: ["error", "info", "success"],
-      control: { type: "inline-radio" },
-      defaultValue: 'info'
+      options: ['error', 'info', 'success'],
+      control: { type: 'inline-radio' },
+      defaultValue: 'info',
     },
   },
 };
 
 export default AlertMeta;
 
-const Template: ComponentStory<typeof AlertNB> = (args) => (
+const Template: ComponentStory<typeof AlertNB> = ({ ...args }) => (
   <AlertNB {...args}>{args.text}</AlertNB>
 );
 

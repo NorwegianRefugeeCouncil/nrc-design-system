@@ -11,6 +11,7 @@ export * from './ArrowUp';
 export * from './Calendar';
 export * from './Close';
 export * from './FileText';
+export * from './Facebook';
 export * from './Home';
 export * from './Mail';
 export * from './Search';

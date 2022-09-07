@@ -1,6 +1,10 @@
 import React, { FC, ReactNode } from 'react';
 import { Text, Box, Pressable } from 'native-base';
 
+import { IconNames } from '../../types/icons';
+import { colorTokens } from '../../tokens/colors';
+import { Icon } from '../Icon/Icon';
+
 type Props = {
   header: string;
   children: ReactNode;
@@ -17,11 +21,28 @@ export const Accordion: FC<Props> = ({
   const handleOnPress = () => setIsExpanded(!isExpanded);
 
   return (
-    <Box>
-      <Pressable bg="secondary.500" p="2" onPress={handleOnPress}>
-        <Text color="white" fontSize="18px" lineHeight="21px">
+    <Box mb="1">
+      <Pressable
+        bg="secondary.500"
+        p="2"
+        onPress={handleOnPress}
+        flex="true"
+        flexDirection="row"
+        justifyContent="space-between"
+        alignItems="center"
+        height="50px"
+        _hover={{
+          bg: 'secondary.200',
+        }}
+      >
+        <Text color="white" fontSize="18px" lineHeight="21px" fontWeight="700">
           {header}
         </Text>
+        <Icon
+          name={isExpanded ? IconNames.ArrowDown : IconNames.ArrowLeft}
+          size="24px"
+          color={colorTokens.white}
+        />
       </Pressable>
       {isExpanded && (
         <Box bg="secondary.100" p="2">

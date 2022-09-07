@@ -7,33 +7,33 @@ const TextAreaMeta: ComponentMeta<typeof TextAreaNB> = {
   component: TextAreaNB,
   argTypes: {
     value: {
-      control: { type: "text" },
-      defaultValue: 'TextArea Text'
+      control: { type: 'text' },
+      defaultValue: 'TextArea Text',
     },
     helperText: {
-      control: { type: "text" },
-      defaultValue: 'This is a helpful explanation'
+      control: { type: 'text' },
+      defaultValue: 'This is a helpful explanation',
     },
     isDisabled: {
-      control: {type: 'boolean'},
-      defaultValue: false
+      control: { type: 'boolean' },
+      defaultValue: false,
     },
     isHovered: {
-      control: {type: 'boolean'},
-      defaultValue: false
+      control: { type: 'boolean' },
+      defaultValue: false,
     },
     isFocused: {
-      control: {type: 'boolean'},
-      defaultValue: false
+      control: { type: 'boolean' },
+      defaultValue: false,
     },
     isReadOnly: {
-      control: {type: 'boolean'},
-      defaultValue: false
+      control: { type: 'boolean' },
+      defaultValue: false,
     },
     isInvalid: {
-      control: {type: 'boolean'},
-      defaultValue: false
-    }
+      control: { type: 'boolean' },
+      defaultValue: false,
+    },
   },
 };
 

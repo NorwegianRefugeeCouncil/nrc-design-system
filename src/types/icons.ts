@@ -18,6 +18,7 @@ export enum IconNames {
   Calendar = 'Calendar',
   Close = 'Close',
   FileText = 'FileText',
+  Facebook = 'Facebook',
   Home = 'Home',
   Mail = 'Mail',
   Search = 'Search',
