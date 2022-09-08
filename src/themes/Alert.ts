@@ -1,15 +1,21 @@
+import typography from '../tokens/typography';
+
 export default {
   baseStyle: {
-    height: 'nrc_10',
+    height: 'max-content',
     borderWidth: '1px',
     borderRadius: '0px',
-    alignItems: 'flex-start',
-    minWidth: '520px',
     px: 'nrc_4',
+    width: '100%',
     _text: {
       fontSize: '20px',
       fontWeight: '500',
     },
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    gap: '10px',
   },
   variants: {
     info: () => ({
@@ -17,6 +23,8 @@ export default {
       borderColor: 'neutral.500',
       _text: {
         color: 'neutral.500',
+        height: typography.fontSizes.sm,
+        lineHeight: typography.lineHeights.xs,
       },
     }),
     success: () => ({
@@ -24,6 +32,8 @@ export default {
       borderColor: 'signalSuccess',
       _text: {
         color: 'signalSuccess',
+        height: typography.fontSizes.sm,
+        lineHeight: typography.lineHeights.xs,
       },
     }),
     error: () => ({
@@ -31,6 +41,8 @@ export default {
       borderColor: 'signalDanger',
       _text: {
         color: 'signalDanger',
+        height: typography.fontSizes.sm,
+        lineHeight: typography.lineHeights.xs,
       },
     }),
   },

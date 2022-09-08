@@ -1,25 +1,21 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
-import { Button as ButtonNB } from 'native-base';
+import { IconButton as IconButtonNB } from 'native-base';
 
 import { Icon } from '../src/components';
 import { IconNames } from '../src/types/icons';
 
-const ButtonMeta: ComponentMeta<typeof Button> = {
+const IconButtonMeta: ComponentMeta<typeof IconButton> = {
   title: 'Components/Button',
-  component: ButtonNB,
+  component: IconButtonNB,
   argTypes: {
-    text: {
-      control: { type: 'text' },
-      defaultValue: 'Button Text',
-    },
     colorScheme: {
       options: ['primary', 'secondary'],
       control: { type: 'inline-radio' },
       defaultValue: 'primary',
     },
     variant: {
-      options: ['major', 'minor', 'link'],
+      options: ['major', 'minor'],
       control: { type: 'inline-radio' },
       defaultValue: 'major',
     },
@@ -44,24 +40,13 @@ const ButtonMeta: ComponentMeta<typeof Button> = {
       control: { type: 'select' },
       defaultValue: 'Home',
     },
-    hasIcon: {
-      control: { type: 'boolean' },
-      defaultValue: false,
-    },
   },
 };
 
-export default ButtonMeta;
+export default IconButtonMeta;
 
-const Template: ComponentStory<typeof ButtonNB> = ({ ...args }) => (
-  <ButtonNB
-    {...args}
-    startIcon={
-      args.hasIcon ? <Icon size="6" name={args.iconName} /> : undefined
-    }
-  >
-    {args.text}
-  </ButtonNB>
+const Template: ComponentStory<typeof IconButtonNB> = ({ ...args }) => (
+  <IconButtonNB {...args} icon={<Icon size="5" name={args.iconName} />} />
 );
 
-export const Button = Template.bind({});
+export const IconButton = Template.bind({});

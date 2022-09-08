@@ -9,6 +9,7 @@ export default {
     height: 'nrc_10',
     paddingLeft: 'nrc_10',
     paddingRight: 'nrc_10',
+    width: 'max-content',
   },
   variants: {
     major: ({ colorScheme }: any) => ({
@@ -110,6 +111,18 @@ export default {
         },
         _icon: {
           color: 'white',
+        },
+      },
+    }),
+    link: ({ colorScheme }: any) => ({
+      paddingLeft: '0',
+      paddingRight: '0',
+      paddingTop: '0',
+      paddingBottom: '0',
+      height: '24px',
+      _hover: {
+        _text: {
+          color: `${colorScheme}.200`,
         },
       },
     }),

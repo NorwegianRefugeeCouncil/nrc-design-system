@@ -68,6 +68,12 @@ const textTheme = {
       },
       { fontWeight: 'medium' },
     ),
+    navLink: makeTextVariant(
+      {
+        '1': { fontSize: 'xs', lineHeight: 'sm' },
+      },
+      { fontWeight: 'medium' },
+    ),
   },
 };
 

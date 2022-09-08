@@ -29,6 +29,13 @@ export const parameters = {
       order: [
         'Intro',
         'Foundation',
+        [
+          'Logos', 
+          'Colors', 
+          'Typography', 
+          'Icons', 
+          'Spacing'
+        ],
         '*'
       ], 
     },

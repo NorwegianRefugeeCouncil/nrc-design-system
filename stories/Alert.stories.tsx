@@ -1,6 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
-import { Alert as AlertNB } from 'native-base';
+import { Alert as AlertNB, Text } from 'native-base';
+import { Pressable } from 'react-native';
+
+import { IconNames } from '../src/types/icons';
+import { Icon } from '../src/components';
 
 const AlertMeta: ComponentMeta<typeof AlertNB> = {
   title: 'Components/Alert',
@@ -13,7 +17,11 @@ const AlertMeta: ComponentMeta<typeof AlertNB> = {
     variant: {
       options: ['error', 'info', 'success'],
       control: { type: 'inline-radio' },
-      defaultValue: 'info',
+      defaultValue: 'error',
+    },
+    isClosable: {
+      control: { type: 'boolean' },
+      defaultValue: true,
     },
   },
 };
@@ -21,7 +29,14 @@ const AlertMeta: ComponentMeta<typeof AlertNB> = {
 export default AlertMeta;
 
 const Template: ComponentStory<typeof AlertNB> = ({ ...args }) => (
-  <AlertNB {...args}>{args.text}</AlertNB>
+  <AlertNB {...args}>
+    {args.text}
+    {args.isClosable && (
+      <Pressable onPress={() => alert('close alert')}>
+        <Icon size="5" name={IconNames.Close} />
+      </Pressable>
+    )}
+  </AlertNB>
 );
 
 export const Alert = Template.bind({});
