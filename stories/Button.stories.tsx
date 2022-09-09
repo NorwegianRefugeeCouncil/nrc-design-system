@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import { Button as ButtonNB } from 'native-base';
 
 import { Icon } from '../src/components';
-import { IconNames } from '../src/types/icons';
+import { IconNames, ActivityIconNames } from '../src/types/icons';
 
 const ButtonMeta: ComponentMeta<typeof Button> = {
   title: 'Components/Button',
@@ -40,7 +40,7 @@ const ButtonMeta: ComponentMeta<typeof Button> = {
       defaultValue: false,
     },
     iconName: {
-      options: IconNames,
+      options: [...Object.keys(IconNames), ...Object.keys(ActivityIconNames)],
       control: { type: 'select' },
       defaultValue: 'Home',
     },

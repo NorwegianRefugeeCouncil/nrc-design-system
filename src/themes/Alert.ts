@@ -15,34 +15,49 @@ export default {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    gap: '10px',
+    rowGap: '10px',
   },
   variants: {
     info: () => ({
       backgroundColor: 'neutral.100',
       borderColor: 'neutral.500',
       _text: {
-        color: 'neutral.500',
         height: typography.fontSizes.sm,
         lineHeight: typography.lineHeights.xs,
+      },
+      textProps: {
+        color: 'neutral.500',
+      },
+      svgProps: {
+        color: 'neutral.500',
       },
     }),
     success: () => ({
       backgroundColor: 'tertiary4.100',
       borderColor: 'signalSuccess',
       _text: {
-        color: 'signalSuccess',
         height: typography.fontSizes.sm,
         lineHeight: typography.lineHeights.xs,
+      },
+      textProps: {
+        color: 'signalSuccess',
+      },
+      svgProps: {
+        color: 'signalSuccess',
       },
     }),
     error: () => ({
       backgroundColor: 'tertiary2.100',
       borderColor: 'signalDanger',
       _text: {
-        color: 'signalDanger',
         height: typography.fontSizes.sm,
         lineHeight: typography.lineHeights.xs,
+      },
+      textProps: {
+        color: 'signalDanger',
+      },
+      svgProps: {
+        color: 'signalDanger',
       },
     }),
   },
