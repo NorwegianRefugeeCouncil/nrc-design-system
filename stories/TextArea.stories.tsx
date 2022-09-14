@@ -2,37 +2,46 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import { FormControl, TextArea as TextAreaNB } from 'native-base';
 
+const argTypes = {
+  value: {
+    control: { type: 'text' },
+    defaultValue: 'TextArea Text',
+  },
+  helperText: {
+    control: { type: 'text' },
+    defaultValue: 'This is a helpful explanation',
+  },
+  isDisabled: {
+    control: { type: 'boolean' },
+    defaultValue: false,
+  },
+  isHovered: {
+    control: { type: 'boolean' },
+    defaultValue: false,
+  },
+  isFocused: {
+    control: { type: 'boolean' },
+    defaultValue: false,
+  },
+  isReadOnly: {
+    control: { type: 'boolean' },
+    defaultValue: false,
+  },
+  isInvalid: {
+    control: { type: 'boolean' },
+    defaultValue: false,
+  },
+};
+
 const TextAreaMeta: ComponentMeta<typeof TextAreaNB> = {
   title: 'Components/Textarea',
   component: TextAreaNB,
-  argTypes: {
-    value: {
-      control: { type: 'text' },
-      defaultValue: 'TextArea Text',
-    },
-    helperText: {
-      control: { type: 'text' },
-      defaultValue: 'This is a helpful explanation',
-    },
-    isDisabled: {
-      control: { type: 'boolean' },
-      defaultValue: false,
-    },
-    isHovered: {
-      control: { type: 'boolean' },
-      defaultValue: false,
-    },
-    isFocused: {
-      control: { type: 'boolean' },
-      defaultValue: false,
-    },
-    isReadOnly: {
-      control: { type: 'boolean' },
-      defaultValue: false,
-    },
-    isInvalid: {
-      control: { type: 'boolean' },
-      defaultValue: false,
+  argTypes,
+  parameters: {
+    docs: {
+      source: {
+        code: `<FormControl>\n  <FormControl.Label>Label</FormControl.Label>\n  <Textarea\n    ${Object.keys(argTypes).map((arg)=>`${arg}="${argTypes[arg].defaultValue}"`).join("\n    ")}\n  />\n</FormControl>`,
+      },
     },
   },
 };
