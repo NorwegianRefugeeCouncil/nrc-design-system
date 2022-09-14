@@ -31,20 +31,20 @@ try {
 
 const getStories = () => {
   return [
-    require("../stories/Accordion.stories.tsx"),
+    require("../stories/Accordion.stories.mdx"),
     require("../stories/Alert.stories.tsx"),
     require("../stories/Button.stories.tsx"),
     require("../stories/Colors.stories.mdx"),
     require("../stories/DateTimePicker.stories.tsx"),
-    require("../stories/Fonts.stories.mdx"),
     require("../stories/Icon.stories.mdx"),
     require("../stories/IconButton.stories.tsx"),
     require("../stories/Input.stories.tsx"),
     require("../stories/Intro.stories.mdx"),
     require("../stories/Logos.stories.mdx"),
-    require("../stories/Spacing2.stories.mdx"),
+    require("../stories/Spacing.stories.mdx"),
     require("../stories/TextArea.stories.tsx"),
-    require("../stories/Typo.stories.mdx"),
+    require("../stories/TextStyles.stories.mdx"),
+    require("../stories/Typeface.stories.mdx"),
   ];
 };
 

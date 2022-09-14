@@ -12,6 +12,16 @@ const AccordionMeta: ComponentMeta<typeof AccordionNRC> = {
       control: { type: 'text' },
       defaultValue: 'Accordion Header',
     },
+    defaultOpen: {
+      control: { type: 'boolean' },
+    },
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: '<Accordion header="Accordion Header" defaultOpen={false | true}>\n  {...content}\n</Accordion>',
+      },
+    },
   },
 };
 
@@ -19,7 +29,7 @@ export default AccordionMeta;
 
 const Template: ComponentStory<typeof AccordionNRC> = ({ ...args }) => (
   <VStack>
-    <AccordionNRC {...args}>
+    <AccordionNRC {...args} defaultOpen>
       <VStack>
         <Text variant="display" level="1">
           Content
@@ -35,7 +45,8 @@ const Template: ComponentStory<typeof AccordionNRC> = ({ ...args }) => (
         </Text>
       </VStack>
     </AccordionNRC>
-    <AccordionNRC {...args}>
+    <AccordionNRC {...args} defaultOpen={false}>
+      m{' '}
       <VStack>
         <Text variant="display" level="1">
           Content

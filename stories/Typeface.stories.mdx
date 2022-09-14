@@ -4,7 +4,7 @@ import { Text, VStack } from 'native-base'
 
 
 <Meta
-  title="Foundation/Typography/Fonts"
+  title="Foundation/Typography/Typeface"
   parameters={{
     viewMode: "docs",
     previewTabs: {
@@ -13,14 +13,17 @@ import { Text, VStack } from 'native-base'
   }}
 />
 
-# Fonts
+# Typeface
 
 Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves. While some grotesks distort their letterforms to force a rigid rhythm, Roboto doesn’t compromise, allowing letters to be settled into their natural width. This makes for a more natural reading rhythm more commonly found in humanist and serif types.
 
 Some body Text. Google itself describes the font as “modern, yet approachable,” and says it is somewhat emotional. It is a rounded, clean typeface with a straightforward, geometric design that offers clean lines. 
 
 <Canvas>
-  <Story name="Roboto">
+  <Story name="Roboto"
+      parameters={{ docs: { source: { code:
+      `<Text variant='body' level='1'>Roboto Regular - 400</Text>\n<Text variant='body' level='1' italic>Roboto Italic - 400</Text>\n<Text variant='body' level='1' fontWeight='500'>Roboto Medium - 500</Text>\n<Text variant='body' level='1' fontWeight='700'>Roboto Bold - 700</Text>`
+    }}}}>
     {(args, { globals: { locale } }) => {
       return (
         <VStack>
