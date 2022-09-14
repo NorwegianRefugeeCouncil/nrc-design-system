@@ -6,7 +6,7 @@ export default {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: 'neutral.300',
-    borderRadius: 'nrc_xs',
+    borderRadius: 'xs',
     color: 'neutral.500',
     padding: 0,
     _text: {
@@ -19,11 +19,11 @@ export default {
       _web: {
         ...textTheme.variants.body({ level: '2' }),
       },
-      ml: 'nrc_2',
+      ml: '2',
     },
     _checked: {
       borderColor: 'primary.500',
-      borderRadius: 'nrc_xs',
+      borderRadius: 'xs',
       backgroundColor: 'primary.500',
       _icon: {
         backgroundColor: 'primary.500',

@@ -56,9 +56,9 @@ export default ButtonMeta;
 const Template: ComponentStory<typeof ButtonNB> = ({ ...args }) => (
   <ButtonNB
     {...args}
-    startIcon={
-      args.hasIcon ? <Icon size="6" name={args.iconName} /> : undefined
-    }
+    accessibilityLabel={args.text}
+    accessible
+    startIcon={args.hasIcon ? <Icon name={args.iconName} /> : undefined}
   >
     {args.text}
   </ButtonNB>

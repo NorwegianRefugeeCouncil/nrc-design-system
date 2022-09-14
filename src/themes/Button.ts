@@ -5,59 +5,61 @@ export default {
     _text: {
       ...textTheme.variants.heading({ level: '4' }),
     },
-    borderRadius: 'nrc_xs',
-    height: 'nrc_10',
-    paddingLeft: 'nrc_10',
-    paddingRight: 'nrc_10',
+    borderRadius: 'xs',
+    height: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
     width: 'max-content',
   },
   variants: {
-    major: ({ colorScheme }: any) => ({
-      backgroundColor: `${colorScheme}.500`,
-      _text: {
-        color: 'white',
-      },
-      _icon: {
-        color: 'white',
-      },
-      _hover: {
-        backgroundColor:
-          colorScheme === 'secondary' ? 'link' : `${colorScheme}.200`,
-        _text: {
-          color: colorScheme === 'secondary' ? 'white' : `${colorScheme}.500`,
-        },
-        _icon: {
-          color: colorScheme === 'secondary' ? 'white' : `${colorScheme}.500`,
-        },
-      },
-      _disabled: {
-        backgroundColor: 'neutral.300',
-        _text: {
-          color: 'neutral.200',
-        },
-        _icon: {
-          color: 'neutral.200',
-        },
-      },
-      _pressed: {
-        backgroundColor: `${colorScheme}.300`,
+    major: ({ colorScheme, ...args }: any) => {
+      return {
+        backgroundColor: `${colorScheme}.500`,
         _text: {
           color: 'white',
         },
         _icon: {
           color: 'white',
         },
-      },
-      _focus: {
-        backgroundColor: `${colorScheme}.300`,
-        _text: {
-          color: 'white',
+        _hover: {
+          backgroundColor:
+            colorScheme === 'secondary' ? 'link' : `${colorScheme}.200`,
+          _text: {
+            color: colorScheme === 'secondary' ? 'white' : `${colorScheme}.500`,
+          },
+          _icon: {
+            color: colorScheme === 'secondary' ? 'white' : `${colorScheme}.500`,
+          },
         },
-        _icon: {
-          color: 'white',
+        _disabled: {
+          backgroundColor: 'neutral.300',
+          _text: {
+            color: 'neutral.200',
+          },
+          _icon: {
+            color: 'neutral.200',
+          },
         },
-      },
-    }),
+        _pressed: {
+          backgroundColor: `${colorScheme}.300`,
+          _text: {
+            color: 'white',
+          },
+          _icon: {
+            color: 'white',
+          },
+        },
+        _focus: {
+          backgroundColor: `${colorScheme}.300`,
+          _text: {
+            color: 'white',
+          },
+          _icon: {
+            color: 'white',
+          },
+        },
+      };
+    },
     minor: ({ colorScheme }: any) => ({
       backgroundColor: 'white',
       _text: {

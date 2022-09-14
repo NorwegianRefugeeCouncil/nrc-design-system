@@ -14,7 +14,7 @@ export default create({
   appBg: colorTokens.themeLight,
   appContentBg: colorTokens.white,
   appBorderColor: colorTokens.neutral200,
-  appBorderRadius: 4,
+  appBorderRadius: 3,
 
   barTextColor: colorTokens.neutral400,
   barSelectedColor: colorTokens.primary500,
@@ -23,5 +23,5 @@ export default create({
   inputBg: colorTokens.white,
   inputBorder: colorTokens.primary200,
   inputTextColor: colorTokens.neutral500,
-  inputBorderRadius: 4,
+  inputBorderRadius: 3,
 });

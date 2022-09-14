@@ -3,19 +3,21 @@ import typography from '../tokens/typography';
 export default {
   baseStyle: {
     height: 'max-content',
+    minHeight: 10,
     borderWidth: '1px',
     borderRadius: '0px',
-    px: 'nrc_4',
+    px: '18px',
+    py: '13px',
     width: '100%',
     _text: {
-      fontSize: '20px',
-      fontWeight: '500',
+      fontSize: typography.fontSizes.sm,
+      fontWeight: 'medium',
     },
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    rowGap: '10px',
+    gap: '10px',
   },
   variants: {
     info: () => ({

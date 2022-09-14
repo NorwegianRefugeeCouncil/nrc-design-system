@@ -1,7 +1,7 @@
 import { ActivityIconNames, IconNames, Logos } from '../types/icons';
 
 import colors from './colors';
-import spacing from './spacing';
+import spacing from './spaces';
 import typography from './typography';
 import radii from './radii';
 

@@ -21,9 +21,10 @@ export default {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: 'neutral.300',
-    borderRadius: 'nrc_xs',
+    borderRadius: 'xs',
     color: 'neutral.300',
     padding: 3,
+    height: 10,
     _android: {
       ...textTheme.variants.body({ level: '1' }),
     },

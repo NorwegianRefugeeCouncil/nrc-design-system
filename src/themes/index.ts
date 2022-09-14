@@ -1,6 +1,7 @@
 import { extendTheme } from 'native-base';
 
 import tokens from '../tokens';
+import spaces from '../tokens/spaces';
 
 import Alert from './Alert';
 import Button from './Button';
@@ -36,29 +37,7 @@ export default extendTheme({
     Logo: {},
     Text,
   },
-  space: {
-    nrc_1: tokens.spacing.spacing5,
-    nrc_2: tokens.spacing.spacing10,
-    nrc_3: tokens.spacing.spacing15,
-    nrc_4: tokens.spacing.spacing20,
-    nrc_5: tokens.spacing.spacing25,
-    nrc_6: tokens.spacing.spacing30,
-    nrc_7: tokens.spacing.spacing35,
-    nrc_8: tokens.spacing.spacing40,
-    nrc_9: tokens.spacing.spacing45,
-    nrc_10: tokens.spacing.spacing50,
-  },
-  sizes: {
-    nrc_1: tokens.spacing.spacing5,
-    nrc_2: tokens.spacing.spacing10,
-    nrc_3: tokens.spacing.spacing15,
-    nrc_4: tokens.spacing.spacing20,
-    nrc_5: tokens.spacing.spacing25,
-    nrc_6: tokens.spacing.spacing30,
-    nrc_7: tokens.spacing.spacing35,
-    nrc_8: tokens.spacing.spacing40,
-    nrc_9: tokens.spacing.spacing45,
-    nrc_10: tokens.spacing.spacing50,
-  },
+  space: spaces,
+  sizes: spaces,
   radii: tokens.radii,
 });

@@ -1,3 +1,3 @@
 export default {
-  nrc_xs: '3px',
+  xs: '3px',
 };

@@ -46,7 +46,7 @@ export const Notification: FC<Props> = ({
       </Text>
       {isClosable && (
         <Pressable onPress={handleOnPress}>
-          <Icon size="6" name={IconNames.Close} {...svgProps} />
+          <Icon name={IconNames.Close} {...svgProps} />
         </Pressable>
       )}
     </Alert>

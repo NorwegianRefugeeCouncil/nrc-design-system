@@ -38,10 +38,11 @@ const getStories = () => {
     require("../stories/DateTimePicker.stories.tsx"),
     require("../stories/Fonts.stories.mdx"),
     require("../stories/Icon.stories.mdx"),
+    require("../stories/IconButton.stories.tsx"),
     require("../stories/Input.stories.tsx"),
     require("../stories/Intro.stories.mdx"),
     require("../stories/Logos.stories.mdx"),
-    require("../stories/Spacing.stories.mdx"),
+    require("../stories/Spacing2.stories.mdx"),
     require("../stories/TextArea.stories.tsx"),
     require("../stories/Typo.stories.mdx"),
   ];

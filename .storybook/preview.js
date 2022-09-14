@@ -31,8 +31,8 @@ export const parameters = {
         'Foundation',
         [
           'Logos', 
-          'Colors', 
           'Typography', 
+          'Colors',
           'Icons', 
           'Spacing'
         ],
