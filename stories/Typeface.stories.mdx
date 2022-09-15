@@ -5,12 +5,6 @@ import { Text, VStack } from 'native-base'
 
 <Meta
   title="Foundation/Typography/Typeface"
-  parameters={{
-    viewMode: "docs",
-    previewTabs: {
-      canvas: { hidden: true },
-    },
-  }}
 />
 
 # Typeface
@@ -20,25 +14,133 @@ Roboto has a dual nature. It has a mechanical skeleton and the forms are largely
 Some body Text. Google itself describes the font as “modern, yet approachable,” and says it is somewhat emotional. It is a rounded, clean typeface with a straightforward, geometric design that offers clean lines. 
 
 <Canvas>
-  <Story name="Roboto"
-      parameters={{ docs: { source: { code:
-      `<Text variant='body' level='1'>Roboto Regular - 400</Text>\n<Text variant='body' level='1' italic>Roboto Italic - 400</Text>\n<Text variant='body' level='1' fontWeight='500'>Roboto Medium - 500</Text>\n<Text variant='body' level='1' fontWeight='700'>Roboto Bold - 700</Text>`
-    }}}}>
+  <Story
+    name="Roboto - 400"
+    argTypes={{
+      text: {
+        control: { type: 'text' },
+        defaultValue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+    }}
+    parameters={{ docs: { source: { code: `
+<Text variant='body' level='1'>Roboto - 400</Text>
+`
+  }}}}>
     {(args, { globals: { locale } }) => {
       return (
         <VStack>
-        <Text variant='body' level='1'>
-          Roboto Regular - 400
-        </Text>
-        <Text variant='body' level='1' italic>
-          Roboto Italic - 400
-        </Text>
-        <Text variant='body' level='1' fontWeight='500'>
-          Roboto Medium - 500
-        </Text>
-        <Text variant='body' level='1' fontWeight='700'>
-          Roboto Bold - 700
-        </Text>
+          <Text variant='body' level='1'>
+            Roboto - 400
+          </Text>
+          <Text variant='body' level='1'>
+            The quick brown fox jumps over the lazy dog.
+          </Text>
+          <Text variant='body' level='1'>
+            ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 .,-’“”!?#@
+          </Text>
+          <Text variant='body' level='1' mt='4'>
+            {args.text}
+          </Text>
+        </VStack>
+      );
+    }}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Roboto Italic - 400"
+    argTypes={{
+      text: {
+        control: { type: 'text' },
+        defaultValue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+    }}
+    parameters={{ docs: { source: { code:
+      `
+<Text variant='body' level='1' italic>Roboto Italic - 400</Text>
+`}}}}>
+    {(args, { globals: { locale } }) => {
+      return (
+        <VStack>
+          <Text variant='body' level='1' italic>
+            Roboto Italic - 400
+          </Text>
+          <Text variant='body' level='1' italic>
+            The quick brown fox jumps over the lazy dog.
+          </Text>
+          <Text variant='body' level='1' italic>
+            ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 .,-’“”!?#@
+          </Text>
+          <Text variant='body' level='1' italic mt='4'>
+            {args.text}
+          </Text>
+        </VStack>
+      );
+    }}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Roboto Medium - 500"
+    argTypes={{
+      text: {
+        control: { type: 'text' },
+        defaultValue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+    }}
+    parameters={{ docs: { source: { code: `
+<Text variant='body' level='1' fontWeight='500'>Roboto Medium - 500</Text>
+`}}}}>
+    {(args, { globals: { locale } }) => {
+      return (
+        <VStack>
+          <Text variant='body' level='1' fontWeight='500'>
+            Roboto Medium - 500
+          </Text>
+          <Text variant='body' level='1' fontWeight='500'>
+            The quick brown fox jumps over the lazy dog.
+          </Text>
+          <Text variant='body' level='1' fontWeight='500'>
+            ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 .,-’“”!?#@
+          </Text>
+          <Text variant='body' level='1' fontWeight='500' mt='4'>
+            {args.text}
+          </Text>
+        </VStack>
+      );
+    }}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Roboto Bold - 700"
+    argTypes={{
+      text: {
+        control: { type: 'text' },
+        defaultValue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+    }}
+    parameters={{ docs: { source: { code: `
+<Text variant='body' level='1' medium>Roboto Bold - 700</Text>
+`}}}}>
+    {(args, { globals: { locale } }) => {
+      return (
+        <VStack>
+          <Text variant='body' level='1' fontWeight='700'>
+            Roboto Bold - 700
+          </Text>
+          <Text variant='body' level='1' fontWeight='700'>
+            The quick brown fox jumps over the lazy dog.
+          </Text>
+          <Text variant='body' level='1' fontWeight='700'>
+            ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 .,-’“”!?#@
+          </Text>
+          <Text variant='body' level='1' fontWeight='700' mt='4'>
+            {args.text}
+          </Text>
         </VStack>
       );
     }}

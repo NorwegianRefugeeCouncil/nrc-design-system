@@ -45,7 +45,15 @@ const InputMeta: ComponentMeta<typeof InputNB> = {
   parameters: {
     docs: {
       source: {
-        code: `<FormControl>\n  <FormControl.Label>Label</FormControl.Label>\n  <Input\n    ${Object.keys(argTypes).map((arg)=>`${arg}="${argTypes[arg].defaultValue}"`).join("\n    ")}\n  />\n  <FormControl.HelperText>{args.helperText}</FormControl.HelperText>\n</FormControl>`,
+        code: `
+<FormControl>
+  <FormControl.Label>Label</FormControl.Label>
+  <Input
+    ${Object.keys(argTypes)
+      .map((arg) => `${arg}="${argTypes[arg].defaultValue}"`)
+      .join('\n    ')}\n  />
+  <FormControl.HelperText>{args.helperText}</FormControl.HelperText>
+</FormControl>`,
       },
     },
   },

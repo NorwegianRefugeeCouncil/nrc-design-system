@@ -1,12 +1,11 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
-import { Alert as AlertNB } from 'native-base';
 
-import { Notification } from '../src/components';
+import { Alert as AlertNRC } from '../src/components';
 
-const AlertMeta: ComponentMeta<typeof Notification> = {
+const AlertMeta: ComponentMeta<typeof AlertNRC> = {
   title: 'Components/Alert',
-  component: AlertNB,
+  component: AlertNRC,
   argTypes: {
     text: {
       control: { type: 'text' },
@@ -26,8 +25,8 @@ const AlertMeta: ComponentMeta<typeof Notification> = {
 
 export default AlertMeta;
 
-const Template: ComponentStory<typeof Notification> = ({ ...args }) => (
-  <Notification {...args} />
+const Template: ComponentStory<typeof AlertNRC> = ({ ...args }) => (
+  <AlertNRC {...args} />
 );
 
 export const Alert = Template.bind({});

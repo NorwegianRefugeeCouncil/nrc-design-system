@@ -40,7 +40,15 @@ const TextAreaMeta: ComponentMeta<typeof TextAreaNB> = {
   parameters: {
     docs: {
       source: {
-        code: `<FormControl>\n  <FormControl.Label>Label</FormControl.Label>\n  <Textarea\n    ${Object.keys(argTypes).map((arg)=>`${arg}="${argTypes[arg].defaultValue}"`).join("\n    ")}\n  />\n</FormControl>`,
+        code: `
+<FormControl>
+  <FormControl.Label>Label</FormControl.Label>
+  <Textarea
+    ${Object.keys(argTypes)
+      .map((arg) => `${arg}="${argTypes[arg].defaultValue}"`)
+      .join('\n    ')}
+  />
+</FormControl>`,
       },
     },
   },

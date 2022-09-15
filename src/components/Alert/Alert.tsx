@@ -1,5 +1,11 @@
 import React, { FC } from 'react';
-import { Text, Alert, Pressable, IAlertProps, Box } from 'native-base';
+import {
+  Text,
+  Alert as AlertNB,
+  Pressable,
+  IAlertProps,
+  Box,
+} from 'native-base';
 
 import { IconNames } from '../../types/icons';
 import { Icon } from '../Icon/Icon';
@@ -8,9 +14,9 @@ import theme from '../../themes/Alert';
 type Props = {
   isClosable: boolean;
   text: string;
-} & Partial<IAlertProps>;
+} & Pick<IAlertProps, 'variant'>;
 
-export const Notification: FC<Props> = ({
+export const Alert: FC<Props> = ({
   isClosable = false,
   text,
   variant,
@@ -40,7 +46,7 @@ export const Notification: FC<Props> = ({
   }
 
   return (
-    <Alert {...props} variant={variant}>
+    <AlertNB {...props} variant={variant}>
       <Text fontSize="20px" lineHeight="24px" {...textProps}>
         {text}
       </Text>
@@ -49,6 +55,6 @@ export const Notification: FC<Props> = ({
           <Icon name={IconNames.Close} {...svgProps} />
         </Pressable>
       )}
-    </Alert>
+    </AlertNB>
   );
 };
