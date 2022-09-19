@@ -12,6 +12,7 @@
   "scripts": {
     "android": "expo start --android",
     "build-storybook": "build-storybook",
+    "build:chromatic": "yarn predeploy && yarn chromatic",
     "build:cjs": "tsc --module commonjs --outDir lib/cjs",
     "build:esm": "tsc",
     "build": "yarn build:esm && yarn build:cjs",
@@ -22,20 +23,18 @@
     "lint": "eslint --ext js,ts,tsx .",
     "predeploy": "build-storybook -o web-build",
     "prestart": "yarn update-stories",
-    "start": "expo start",
+    "start:native": "expo start",
     "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
-    "storybook": "start-storybook -p 6006",
+    "start:web": "start-storybook -p 6006",
     "update-stories": "sb-rn-get-stories --config-path .ondevice",
     "web": "expo start --web",
-    "chromatic": "npx chromatic --project-token=a129fe80d7a1 --storybook-build-dir storybook-static"
+    "chromatic": "npx chromatic --project-token=a129fe80d7a1 --storybook-build-dir web-build"
   },
   "dependencies": {
     "@expo-google-fonts/roboto": "~0.2.2",
     "@react-native-async-storage/async-storage": "~1.15.0",
     "@react-native-community/datetimepicker": "^6.2.0",
     "@react-native-community/slider": "4.1.12",
-    "expo": "~44.0.6",
-    "expo-status-bar": "~1.2.0",
     "native-base": "~3.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -52,6 +51,8 @@
     "@babel/plugin-syntax-flow": "^7.18.6",
     "@babel/plugin-transform-react-jsx": "^7.18.6",
     "@babel/preset-env": "^7.18.9",
+    "expo": "~44.0.6",
+    "expo-status-bar": "~1.2.0",
     "@storybook/addon-actions": "~6.3.0",
     "@storybook/addon-backgrounds": "^6.3.0",
     "@storybook/addon-controls": "~6.3.0",
@@ -94,6 +95,12 @@
     "require-from-string": "2.0.2",
     "typescript": "~4.7.4",
     "webpack": "^4.x"
+  },
+  "peerDependencies": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+    "@expo-google-fonts/roboto": "~0.2.2"
   },
   "resolutions": {
     "@types/react": "17.0.1",
