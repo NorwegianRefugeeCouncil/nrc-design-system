@@ -31,7 +31,7 @@ try {
 
 const getStories = () => {
   return [
-    require("../stories/Accordion.stories.mdx"),
+    require("../stories/Accordion.stories.tsx"),
     require("../stories/Alert.stories.tsx"),
     require("../stories/Button.stories.tsx"),
     require("../stories/Colors.stories.mdx"),

@@ -46,7 +46,6 @@ const Template: ComponentStory<typeof AccordionNRC> = ({ ...args }) => (
       </VStack>
     </AccordionNRC>
     <AccordionNRC {...args} defaultOpen={false}>
-      m{' '}
       <VStack>
         <Text variant="display" level="1">
           Content
