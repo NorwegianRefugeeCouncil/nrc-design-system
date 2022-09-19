@@ -60,51 +60,50 @@ import { Text, VStack } from 'native-base';
 }
 .logo {
   grid-area: logo;
-  height: 80px;
 }
 
 @media only screen and (max-width: 600px) {
-.logo-container {
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto auto auto auto;
-}
+  .logo-container {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto;
+  }
 
-.logo-name__main {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-.logo__main {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-.logo-name__horizontal {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 4;
-}
-.logo__horizontal {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 4;
-  grid-row-end: 5;
-}
-.logo-name__mark {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 5;
-  grid-row-end: 6;
-}
-.logo__mark {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 6;
-  grid-row-end: 7;
-}
+  .logo-name__main {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .logo__main {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .logo-name__horizontal {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .logo__horizontal {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .logo-name__mark {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .logo__mark {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
 }
 
 
@@ -119,23 +118,23 @@ More about Logos at the [NRC brand book](https://identity.nrc.no/auth/?referer=%
 <Canvas>
   <Story name="Logos" parameters={{ docs: { source: { code:
     `
-<Logo name='Main' height="100px"/>
-<Logo name='Horizontal' height="100px"/>
-<Logo name='Mark' height="100px"/>
+<Logo name='Main' height="80px"/>
+<Logo name='Horizontal' height="80px"/>
+<Logo name='Mark' height="80px"/>
     `
     }}}}>
     <div className='logo-container'>
         <Text className='logo-name__main' variant='caption'>Main</Text>
         <div className='logo__main'>
-          <Logo className='logo' name='Main' />
+          <Logo className='logo' name='Main' height="80px"/>
         </div>
         <Text className='logo-name__horizontal' variant='caption'>Horizontal</Text>
         <div className='logo__horizontal'>
-          <Logo className='logo' name='Horizontal'/>
+          <Logo className='logo' name='Horizontal' height="80px"/>
         </div>
         <Text className='logo-name__mark' variant='caption'>Mark</Text>
         <div className='logo__mark'>
-          <Logo className='logo' name='Mark' />
+          <Logo className='logo' name='Mark' height="80px"/>
         </div>
     </div>
   </Story>
