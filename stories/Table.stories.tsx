@@ -5,7 +5,7 @@ import { Table as TableNRC } from '../src/components';
 
 const defaultData = [
   {
-    firstNameSDLKFJ: 'tanner',
+    firstNameSDLKFJfirstNameSDLKFJ: 'tanner',
     lastName: 'linsley',
     age: 24,
     visits: 100,
@@ -13,7 +13,7 @@ const defaultData = [
     progress: 50,
   },
   {
-    firstNameSDLKFJ: 'tandy',
+    firstNameSDLKFJfirstNameSDLKFJ: 'tandy',
     lastName: 'miller',
     age: 40,
     visits: 40,
@@ -21,7 +21,7 @@ const defaultData = [
     progress: 80,
   },
   {
-    firstNameSDLKFJ: 'joe',
+    firstNameSDLKFJfirstNameSDLKFJ: 'joe',
     lastName: 'dirte',
     age: 45,
     visits: 20,
@@ -46,7 +46,7 @@ const TableMeta: ComponentMeta<typeof TableNRC> = {
 export default TableMeta;
 
 const Template: ComponentStory<typeof TableNRC> = ({ data }) => (
-  <TableNRC data={data} onItemClick={(item) => console.log(item)} />
+  <TableNRC data={data} onRowClick={(item) => console.log(item)} />
 );
 
 export const Table = Template.bind({});

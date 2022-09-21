@@ -1,36 +1,34 @@
-import * as React from 'react';
+import React from 'react';
 import {
-  flexRender,
   getCoreRowModel,
   getSortedRowModel,
+  Row,
   SortingState,
   useReactTable,
 } from '@tanstack/react-table';
-import {
-  Flex,
-  HStack,
-  ScrollView,
-  FlatList,
-  Text,
-  Box,
-  Pressable,
-} from 'native-base';
-
-import { Icon } from '../Icon/Icon';
-import { IconNames } from '../../types/icons';
+import { Flex, ScrollView, FlatList, Box } from 'native-base';
 
 import { createTableColumns } from './createTableColumns';
+import { TableHeader } from './TableHeader';
+import { TableRow } from './TableRow';
 
 type Props = {
   data: object[];
-  onItemClick: (item: any) => void;
+  onRowClick: (row: Row<any>) => void;
+  minColumnWidth?: number;
 };
 
-export const Table: React.FC<Props> = ({ data, onItemClick }) => {
+export const Table: React.FC<Props> = ({
+  data,
+  onRowClick,
+  minColumnWidth,
+}) => {
   const columns = createTableColumns(data);
+  const minWidth = minColumnWidth || 80;
 
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [rowSelection, setRowSelection] = React.useState({});
+  const [widths, setWidths] = React.useState<number[]>([]);
 
   const table = useReactTable({
     data,
@@ -40,22 +38,14 @@ export const Table: React.FC<Props> = ({ data, onItemClick }) => {
       sorting,
       rowSelection,
     },
-    onColumnSizingChange: (a: any)=>{
-      console.log('onColumnSizingChange', a)
-    },
-    onColumnSizingInfoChange: (a: any)=>{
-      console.log('onColumnSizingInfoChange', a)
-    },
     onSortingChange: setSorting,
     onRowSelectionChange: setRowSelection,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
   });
+
   const headers = table.getFlatHeaders();
-  const sizes = headers.map((h)=> h.getSize())
-  React.useEffect(()=>{
-    headers.forEach((h)=>h.getResizeHandler())
-  },[headers])
+  const rows = table.getRowModel().rows;
 
   return (
     <ScrollView
@@ -64,85 +54,38 @@ export const Table: React.FC<Props> = ({ data, onItemClick }) => {
         flexGrow: 1,
       }}
     >
-      <Box width={table.getCenterTotalSize()}>
+      <Box>
         <Flex
+          alignItems="center"
           borderBottomColor="neutral.300"
           borderBottomWidth="1"
           bgColor="secondary.100"
-          height="9"
-          px="3"
           flexDirection="row"
           justifyContent="flex-start"
-          alignItems="center"
           gap="8"
+          height="9"
+          px="3"
         >
-          {headers.map((header, i) => (
-            <Pressable
-              onPress={header.column.getToggleSortingHandler()}
+          {headers.map((header) => (
+            <TableHeader
               key={header.id}
-              width={header.getSize()}
-            >
-              <Flex
-                flexDirection="row"
-                justifyContent="space-between"
-                alignItems="center"
-              >
-                <Text
-                  fontWeight="700"
-                  fontSize="xs"
-                  lineHeight="4xs"
-                  textTransform="capitalize"
-                >
-                  {header.isPlaceholder
-                    ? null
-                    : flexRender(
-                        header.column.columnDef.header,
-                        header.getContext(),
-                      )}
-                </Text>
-                {{
-                  asc: <Icon name={IconNames.SortAsc} pl="8" />,
-                  desc: <Icon name={IconNames.SortDesc} pl="8" />,
-                }[header.column.getIsSorted() as string] ?? null}
-              </Flex>
-            </Pressable>
+              header={header}
+              widths={widths}
+              setWidths={setWidths}
+              minWidth={minWidth}
+            />
           ))}
         </Flex>
         <FlatList
-          data={table.getRowModel().rows}
+          data={rows}
+          keyExtractor={(item) => item.id}
           renderItem={({ item: row }) => (
-            <Pressable
-              _hover={{ bg: 'primary.100' }}
-              _pressed={{ bg: 'primary.200' }}
-              onPress={onItemClick}
-              key={row.id}
-            >
-              <HStack>
-                {row.getVisibleCells().map((cell, i) => {
-  // console.log(sizes, headers[0].column.getSize())
-  console.log('SIZING', table.getState().columnSizing)
-
-                  return (
-                  <Flex
-                    borderBottomColor="neutral.200"
-                    borderBottomWidth="1"
-                    key={cell.id}
-                    // width={sizes[i]}
-                    width={cell.column.getSize()}
-                    px="3"
-                    minHeight="12"
-                    justifyContent="flex-start"
-                  >
-                    <Text fontSize="2xs" lineHeight="3xs" py="4">
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext(),
-                      )}
-                    </Text>
-                  </Flex>
-                )})}
-              </HStack>
-            </Pressable>
+            <TableRow
+              row={row}
+              onRowClick={onRowClick}
+              widths={widths}
+              minWidth={minWidth}
+            />
           )}
         />
       </Box>
