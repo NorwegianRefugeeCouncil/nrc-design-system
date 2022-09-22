@@ -21,7 +21,7 @@
     "ios": "expo start --ios",
     "lint:fix": "eslint --ext js,ts,tsx --fix .",
     "lint": "eslint --ext js,ts,tsx .",
-    "predeploy": "build-storybook -o web-build",
+    "predeploy": "build-storybook -o web-build -s static",
     "prestart": "yarn update-stories",
     "start:native": "expo start",
     "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
