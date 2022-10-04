@@ -5,7 +5,7 @@ import { Table as TableNRC } from '../src/components';
 
 const defaultData = [
   {
-    firstNameSDLKFJfirstNameSDLKFJ: 'tanner',
+    firstName: 'tanner',
     lastName: 'linsley',
     age: 24,
     visits: 100,
@@ -13,7 +13,7 @@ const defaultData = [
     progress: 50,
   },
   {
-    firstNameSDLKFJfirstNameSDLKFJ: 'tandy',
+    firstName: 'tandy',
     lastName: 'miller',
     age: 40,
     visits: 40,
@@ -21,7 +21,7 @@ const defaultData = [
     progress: 80,
   },
   {
-    firstNameSDLKFJfirstNameSDLKFJ: 'joe',
+    firstName: 'joe',
     lastName: 'dirte',
     age: 45,
     visits: 20,
@@ -35,6 +35,13 @@ const argTypes = {
     control: { type: 'object' },
     defaultValue: defaultData,
   },
+  columnConfig: {
+    control: { type: 'object' },
+    defaultValue: {
+      firstName: 100,
+      info: 120,
+    },
+  },
 };
 
 const TableMeta: ComponentMeta<typeof TableNRC> = {
@@ -45,8 +52,12 @@ const TableMeta: ComponentMeta<typeof TableNRC> = {
 
 export default TableMeta;
 
-const Template: ComponentStory<typeof TableNRC> = ({ data }) => (
-  <TableNRC data={data} onRowClick={(item) => console.log(item)} />
+const Template: ComponentStory<typeof TableNRC> = ({ data, columnConfig }) => (
+  <TableNRC
+    data={data}
+    onRowClick={(item) => console.log(item)}
+    columnConfig={columnConfig}
+  />
 );
 
 export const Table = Template.bind({});

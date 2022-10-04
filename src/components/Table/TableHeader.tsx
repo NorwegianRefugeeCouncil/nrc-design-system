@@ -8,7 +8,6 @@ import { IconNames } from '../../types/icons';
 type Props = {
   header: Header<any, any>;
   widths: number[];
-  minWidth: number;
   setWidths: React.Dispatch<React.SetStateAction<number[]>>;
 };
 
@@ -16,7 +15,6 @@ export const TableHeader: React.FC<Props> = ({
   header,
   widths,
   setWidths,
-  minWidth,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const localWidths = widths;
@@ -29,7 +27,7 @@ export const TableHeader: React.FC<Props> = ({
 
     localWidths[header.index] = ref?.current?.offsetWidth || headerWidth;
     setWidths([...localWidths]);
-  }, [ref.current?.offsetWidth]);
+  }, [ref.current?.offsetWidth, header.column.columnDef]);
 
   return (
     <Pressable
@@ -41,7 +39,7 @@ export const TableHeader: React.FC<Props> = ({
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
-        minWidth={`${minWidth}px`}
+        minWidth={`${header.column.columnDef.minSize}px`}
       >
         <Text
           fontWeight="700"
@@ -56,7 +54,7 @@ export const TableHeader: React.FC<Props> = ({
         {{
           asc: <Icon name={IconNames.SortAsc} pl="8" />,
           desc: <Icon name={IconNames.SortDesc} pl="8" />,
-        }[header.column.getIsSorted() as string] ?? null}
+        }[header.column.getIsSorted() as string] ?? <Icon name={IconNames.SortAsc} pl="8"  color={"neutral.200"}/>}
       </Flex>
     </Pressable>
   );

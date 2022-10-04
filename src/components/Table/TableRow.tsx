@@ -2,35 +2,34 @@ import * as React from 'react';
 import { Flex, Text, Pressable } from 'native-base';
 import { flexRender, Row, Cell } from '@tanstack/react-table';
 
-type Props = {
-  onRowClick: (row: Row<any>) => void;
-  row: Row<any>;
+type Props<T> = {
+  onRowClick: (row: Row<T>) => void;
+  row: Row<T>;
   widths: number[];
-  minWidth: number;
 };
 
-export const TableRow: React.FC<Props> = ({
+export const TableRow = <T extends Record<string, any>>({
   row,
   onRowClick,
   widths,
-  minWidth,
-}) => {
-
+}: 
+Props<T>) => {
   const cells = row.getAllCells();
 
-  const renderCell = (cell: Cell<any, unknown>, i: number) => (
-    <Flex
-      flexDirection="row"
-      justifyContent="flex-start"
-      key={cell.id}
-      width={`${widths[i]}px`}
-      minWidth={`${minWidth}px`}
-    >
-      <Text fontSize="2xs" lineHeight="3xs" py="4">
-        {flexRender(cell.column.columnDef.cell, cell.getContext())}
-      </Text>
-    </Flex>
-  );
+  const renderCell = (cell: Cell<T, unknown>, i: number) => {
+    return (
+      <Flex
+        flexDirection="row"
+        justifyContent="flex-start"
+        key={cell.id}
+        width={`${widths[i]}px`}
+      >
+        <Text fontSize="2xs" lineHeight="3xs" py="4">
+          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+        </Text>
+      </Flex>
+    );
+  };
 
   return (
     <Pressable

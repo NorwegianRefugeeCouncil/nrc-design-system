@@ -1,13 +1,17 @@
-import { ColumnDef, createColumnHelper } from '@tanstack/react-table';
+import { ColumnDef } from '@tanstack/react-table';
 
-export const createTableColumns = (
-  data: Record<string, any>[],
-): ColumnDef<any>[] => {
-  const columnHelper = createColumnHelper<any>();
+import { TableProps } from './types';
 
-  return Object.keys(data[0]).map((key) =>
-    columnHelper.accessor(key, {
-      header: key,
-    }),
-  );
-};
+export const createTableColumns = <T extends Record<string, any>>({
+  data,
+  columnConfig,
+  defaultColumnMinWidth,
+}: Pick<
+  TableProps<T>,
+  'data' | 'columnConfig' | 'defaultColumnMinWidth'
+>): ColumnDef<T>[] =>
+  Object.keys(data[0]).map((key) => ({
+    accessorKey: key,
+    header: key,
+    minSize: columnConfig ? columnConfig[key] : defaultColumnMinWidth,
+  }));

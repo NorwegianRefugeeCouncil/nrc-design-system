@@ -11,23 +11,21 @@ import { Flex, ScrollView, FlatList, Box } from 'native-base';
 import { createTableColumns } from './createTableColumns';
 import { TableHeader } from './TableHeader';
 import { TableRow } from './TableRow';
+import { TableProps } from './types';
 
-type Props = {
-  data: object[];
-  onRowClick: (row: Row<any>) => void;
-  minColumnWidth?: number;
-};
-
-export const Table: React.FC<Props> = ({
+export const Table = <T extends Record<string, any>>({
   data,
   onRowClick,
-  minColumnWidth,
-}) => {
-  const columns = createTableColumns(data);
-  const minWidth = minColumnWidth || 80;
+  defaultColumnMinWidth = 80,
+  columnConfig,
+}: TableProps<T>) => {
+  const columns = createTableColumns({
+    data,
+    columnConfig,
+    defaultColumnMinWidth,
+  });
 
   const [sorting, setSorting] = React.useState<SortingState>([]);
-  const [rowSelection, setRowSelection] = React.useState({});
   const [widths, setWidths] = React.useState<number[]>([]);
 
   const table = useReactTable({
@@ -36,16 +34,14 @@ export const Table: React.FC<Props> = ({
     columnResizeMode: 'onChange',
     state: {
       sorting,
-      rowSelection,
     },
     onSortingChange: setSorting,
-    onRowSelectionChange: setRowSelection,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
   });
 
   const headers = table.getFlatHeaders();
-  const rows = table.getRowModel().rows;
+  const { rows } = table.getRowModel();
 
   return (
     <ScrollView
@@ -72,7 +68,6 @@ export const Table: React.FC<Props> = ({
               header={header}
               widths={widths}
               setWidths={setWidths}
-              minWidth={minWidth}
             />
           ))}
         </Flex>
@@ -84,7 +79,6 @@ export const Table: React.FC<Props> = ({
               row={row}
               onRowClick={onRowClick}
               widths={widths}
-              minWidth={minWidth}
             />
           )}
         />
