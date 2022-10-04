@@ -12,8 +12,7 @@ export const TableRow = <T extends Record<string, any>>({
   row,
   onRowClick,
   widths,
-}: 
-Props<T>) => {
+}: Props<T>) => {
   const cells = row.getAllCells();
 
   const renderCell = (cell: Cell<T, unknown>, i: number) => {

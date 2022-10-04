@@ -75,11 +75,7 @@ export const Table = <T extends Record<string, any>>({
           data={rows}
           keyExtractor={(item) => item.id}
           renderItem={({ item: row }) => (
-            <TableRow
-              row={row}
-              onRowClick={onRowClick}
-              widths={widths}
-            />
+            <TableRow row={row} onRowClick={onRowClick} widths={widths} />
           )}
         />
       </Box>

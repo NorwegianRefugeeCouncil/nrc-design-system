@@ -12,7 +12,7 @@ export default {
     width: 'max-content',
   },
   variants: {
-    major: ({ colorScheme, ...args }: any) => {
+    major: ({ colorScheme }: any) => {
       return {
         backgroundColor: `${colorScheme}.500`,
         _text: {
@@ -23,13 +23,7 @@ export default {
         },
         _hover: {
           backgroundColor:
-            colorScheme === 'secondary' ? 'link' : `${colorScheme}.200`,
-          _text: {
-            color: colorScheme === 'secondary' ? 'white' : `${colorScheme}.500`,
-          },
-          _icon: {
-            color: colorScheme === 'secondary' ? 'white' : `${colorScheme}.500`,
-          },
+            colorScheme === 'secondary' ? `${colorScheme}.300` : `${colorScheme}.200`,
         },
         _disabled: {
           backgroundColor: 'neutral.300',
@@ -41,7 +35,7 @@ export default {
           },
         },
         _pressed: {
-          backgroundColor: `${colorScheme}.300`,
+          backgroundColor: `${colorScheme}.600`,
           _text: {
             color: 'white',
           },
@@ -50,7 +44,7 @@ export default {
           },
         },
         _focus: {
-          backgroundColor: `${colorScheme}.300`,
+          backgroundColor: `${colorScheme}.600`,
           _text: {
             color: 'white',
           },
@@ -72,17 +66,13 @@ export default {
       borderStyle: 'solid',
       borderColor: `${colorScheme}.500`,
       _hover: {
-        backgroundColor:
-          colorScheme === 'secondary'
-            ? `${colorScheme}.100`
-            : `${colorScheme}.200`,
-        borderColor:
-          colorScheme === 'secondary' ? 'link' : `${colorScheme}.500`,
+        backgroundColor: `${colorScheme}.100`,
+        borderColor: `${colorScheme}.500`,
         _text: {
-          color: colorScheme === 'secondary' ? 'link' : `${colorScheme}.500`,
+          color: `${colorScheme}.500`,
         },
         _icon: {
-          color: colorScheme === 'secondary' ? 'link' : `${colorScheme}.500`,
+          color: `${colorScheme}.500`,
         },
       },
       _disabled: {
@@ -96,8 +86,7 @@ export default {
         },
       },
       _pressed: {
-        backgroundColor: `${colorScheme}.300`,
-        borderWidth: 0,
+        backgroundColor: `${colorScheme}.200`,
         _text: {
           color: 'white',
         },
@@ -106,8 +95,7 @@ export default {
         },
       },
       _focus: {
-        backgroundColor: `${colorScheme}.300`,
-        borderWidth: 0,
+        backgroundColor: `${colorScheme}.200`,
         _text: {
           color: 'white',
         },

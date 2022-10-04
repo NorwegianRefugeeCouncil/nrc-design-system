@@ -53,11 +53,13 @@ const TableMeta: ComponentMeta<typeof TableNRC> = {
 export default TableMeta;
 
 const Template: ComponentStory<typeof TableNRC> = ({ data, columnConfig }) => (
+  /* eslint-disable */
   <TableNRC
     data={data}
     onRowClick={(item) => console.log(item)}
     columnConfig={columnConfig}
   />
+  /* eslint-enable */
 );
 
 export const Table = Template.bind({});

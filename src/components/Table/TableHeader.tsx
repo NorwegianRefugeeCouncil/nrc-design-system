@@ -11,11 +11,7 @@ type Props = {
   setWidths: React.Dispatch<React.SetStateAction<number[]>>;
 };
 
-export const TableHeader: React.FC<Props> = ({
-  header,
-  widths,
-  setWidths,
-}) => {
+export const TableHeader: React.FC<Props> = ({ header, widths, setWidths }) => {
   const ref = useRef<HTMLDivElement>(null);
   const localWidths = widths;
 
@@ -54,7 +50,9 @@ export const TableHeader: React.FC<Props> = ({
         {{
           asc: <Icon name={IconNames.SortAsc} pl="8" />,
           desc: <Icon name={IconNames.SortDesc} pl="8" />,
-        }[header.column.getIsSorted() as string] ?? <Icon name={IconNames.SortAsc} pl="8"  color={"neutral.200"}/>}
+        }[header.column.getIsSorted() as string] ?? (
+          <Icon name={IconNames.SortAsc} pl="8" color="neutral.200" />
+        )}
       </Flex>
     </Pressable>
   );

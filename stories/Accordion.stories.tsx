@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import { VStack, Text } from 'native-base';
 
-import { Accordion as AccordionNRC } from '../src';
+import { Accordion as AccordionNRC } from '../src/components';
 
 const AccordionMeta: ComponentMeta<typeof AccordionNRC> = {
   title: 'Components/Accordion',

@@ -21,7 +21,7 @@ export const Accordion: FC<Props> = ({
   const handleOnPress = () => setIsExpanded(!isExpanded);
 
   return (
-    <Box mb="1">
+    <Box mb="4">
       <Pressable
         bg="secondary.500"
         p="2"
@@ -30,9 +30,9 @@ export const Accordion: FC<Props> = ({
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
-        height="50px"
+        height="10"
         _hover={{
-          bg: 'secondary.200',
+          bg: 'secondary.300',
         }}
       >
         <Text color="white" fontSize="18px" lineHeight="21px" fontWeight="700">
@@ -45,7 +45,7 @@ export const Accordion: FC<Props> = ({
         />
       </Pressable>
       {isExpanded && (
-        <Box bg="secondary.100" p="2">
+        <Box bg="neutral.100" p="2">
           {children}
         </Box>
       )}
