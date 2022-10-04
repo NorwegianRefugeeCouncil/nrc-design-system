@@ -1,9 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
-import { IconButton as IconButtonNB } from 'native-base';
 
-import { Icon } from '../src/components';
-import { IconNames } from '../src/types/icons';
+import { IconButton as IconButtonNRC } from '../src/components';
+import { ActivityIconNames, IconNames } from '../src/types/icons';
 
 const argTypes = {
   colorScheme: {
@@ -32,36 +31,27 @@ const argTypes = {
     control: { type: 'boolean' },
     defaultValue: false,
   },
-  iconName: {
-    options: Object.keys(IconNames),
+  icon: {
+    options: [...Object.keys(IconNames), ...Object.keys(ActivityIconNames)],
     control: { type: 'select' },
-    defaultValue: 'Home',
+    defaultValue: IconNames.Home,
+  },
+  altText: {
+    control: { type: 'text' },
+    defaultValue: 'accessibility label',
   },
 };
 
-const IconButtonMeta: ComponentMeta<typeof IconButton> = {
-  title: 'Components/Buttons/IconButton',
-  component: IconButtonNB,
+const IconButtonMeta: ComponentMeta<typeof IconButtonNRC> = {
+  title: 'Components/Buttons/Icon Button',
+  component: IconButtonNRC,
   argTypes,
-  parameters: {
-    docs: {
-      source: {
-        code: `<IconButton\n  colorScheme={'${argTypes.colorScheme.options.join(
-          "'| '",
-        )}'}\n  iconName={'${argTypes.iconName.options.join(
-          "'| '",
-        )}'}\n  variant={'${argTypes.variant.options.join(
-          "'| '",
-        )}'}\n  onPress={()=>...}/>`,
-      },
-    },
-  },
 };
 
 export default IconButtonMeta;
 
-const Template: ComponentStory<typeof IconButtonNB> = ({ ...args }) => (
-  <IconButtonNB {...args} icon={<Icon size="5" name={args.iconName} />} />
+const Template: ComponentStory<typeof IconButtonNRC> = ({ icon, ...args }) => (
+  <IconButtonNRC {...args} icon={icon} />
 );
 
 export const IconButton = Template.bind({});

@@ -1,11 +1,16 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
-import { FormControl, Input as InputNB } from 'native-base';
+
+import { Input as InputNRC } from '../src/components';
 
 const argTypes = {
   value: {
     control: { type: 'text' },
     defaultValue: 'Input Text',
+  },
+  label: {
+    control: { type: 'text' },
+    defaultValue: 'Label',
   },
   helperText: {
     control: { type: 'text' },
@@ -38,35 +43,16 @@ const argTypes = {
   },
 };
 
-const InputMeta: ComponentMeta<typeof InputNB> = {
+const InputMeta: ComponentMeta<typeof InputNRC> = {
   title: 'Components/Input',
-  component: InputNB,
+  component: InputNRC,
   argTypes,
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<FormControl>
-  <FormControl.Label>Label</FormControl.Label>
-  <Input
-    ${Object.keys(argTypes)
-      .map((arg) => `${arg}="${argTypes[arg].defaultValue}"`)
-      .join('\n    ')}\n  />
-  <FormControl.HelperText>{args.helperText}</FormControl.HelperText>
-</FormControl>`,
-      },
-    },
-  },
 };
 
 export default InputMeta;
 
-const Template: ComponentStory<typeof InputNB> = ({ ...args }) => (
-  <FormControl>
-    <FormControl.Label>Label</FormControl.Label>
-    <InputNB {...args} />
-    <FormControl.HelperText>{args.helperText}</FormControl.HelperText>
-  </FormControl>
+const Template: ComponentStory<typeof InputNRC> = ({ ...args }) => (
+  <InputNRC {...args} />
 );
 
 export const Input = Template.bind({});

@@ -1,8 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
-import { Button as ButtonNB } from 'native-base';
 
-import { Icon } from '../src/components';
+import { Button as ButtonNRC } from '../src/components';
 import { IconNames, ActivityIconNames } from '../src/types/icons';
 
 const argTypes = {
@@ -36,51 +35,27 @@ const argTypes = {
     control: { type: 'boolean' },
     defaultValue: false,
   },
-  iconName: {
-    options: [...Object.keys(IconNames), ...Object.keys(ActivityIconNames)],
+  icon: {
+    options: [
+      ...Object.keys(IconNames),
+      ...Object.keys(ActivityIconNames),
+      null,
+    ],
     control: { type: 'select' },
-    defaultValue: 'Home',
-  },
-  hasIcon: {
-    control: { type: 'boolean' },
-    defaultValue: false,
+    defaultValue: null,
   },
 };
 
-const ButtonMeta: ComponentMeta<typeof Button> = {
+const ButtonMeta: ComponentMeta<typeof ButtonNRC> = {
   title: 'Components/Buttons/Button',
-  component: ButtonNB,
+  component: ButtonNRC,
   argTypes,
-  parameters: {
-    docs: {
-      source: {
-        code: `<Button\n  accessibilityLabel="${
-          argTypes.text.defaultValue
-        }"\n  colorScheme={'${argTypes.colorScheme.options.join(
-          "'| '",
-        )}'}\n  iconName={'${argTypes.iconName.options.join(
-          "'| '",
-        )}'}\n  variant={'${argTypes.variant.options.join(
-          "'| '",
-        )}'}\n  onPress={()=>...}\n>\n  ${
-          argTypes.text.defaultValue
-        }\n</Button>`,
-      },
-    },
-  },
 };
 
 export default ButtonMeta;
 
-const Template: ComponentStory<typeof ButtonNB> = ({ ...args }) => (
-  <ButtonNB
-    {...args}
-    accessibilityLabel={args.text}
-    accessible
-    startIcon={args.hasIcon ? <Icon name={args.iconName} /> : undefined}
-  >
-    {args.text}
-  </ButtonNB>
+const Template: ComponentStory<typeof ButtonNRC> = ({ icon, ...args }) => (
+  <ButtonNRC {...args} icon={icon || undefined} />
 );
 
 export const Button = Template.bind({});

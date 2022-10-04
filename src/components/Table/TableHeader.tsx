@@ -51,7 +51,7 @@ export const TableHeader: React.FC<Props> = ({ header, widths, setWidths }) => {
           asc: <Icon name={IconNames.SortAsc} pl="8" />,
           desc: <Icon name={IconNames.SortDesc} pl="8" />,
         }[header.column.getIsSorted() as string] ?? (
-          <Icon name={IconNames.SortAsc} pl="8" color="neutral.200" />
+          <Icon name={IconNames.SortAsc} pl="8" color="neutral.300" />
         )}
       </Flex>
     </Pressable>

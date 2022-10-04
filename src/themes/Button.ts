@@ -23,7 +23,9 @@ export default {
         },
         _hover: {
           backgroundColor:
-            colorScheme === 'secondary' ? `${colorScheme}.300` : `${colorScheme}.200`,
+            colorScheme === 'secondary'
+              ? `${colorScheme}.300`
+              : `${colorScheme}.200`,
         },
         _disabled: {
           backgroundColor: 'neutral.300',

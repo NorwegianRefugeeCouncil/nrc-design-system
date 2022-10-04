@@ -1,9 +1,9 @@
 import textTheme from './Text';
 
 const disabledStyle = {
-  borderColor: 'neutral.200',
+  borderColor: 'neutral.300',
   backgroundColor: 'neutral.100',
-  color: 'neutral.200',
+  color: 'neutral.300',
   borderWidth: 1,
 };
 
@@ -20,10 +20,11 @@ export default {
     backgroundColor: 'white',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: 'neutral.300',
+    borderColor: 'neutral.400',
     borderRadius: 'xs',
-    color: 'neutral.300',
-    padding: 3,
+    color: 'neutral.400',
+    paddingY: 4,
+    paddingX: 3,
     height: 10,
     _android: {
       ...textTheme.variants.body({ level: '1' }),

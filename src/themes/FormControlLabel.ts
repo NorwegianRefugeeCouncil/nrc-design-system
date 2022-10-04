@@ -4,19 +4,17 @@ export default {
   defaultProps: {
     size: 'sm',
   },
-  baseStyle: () => {
-    return {
-      mb: '0.5',
+  baseStyle: {
+    mb: '0.5',
+    _text: {
+      ...textTheme.variants.label({ level: '1' }),
+      color: 'neutral.400',
+    },
+    _invalid: {
       _text: {
-        ...textTheme.variants.label({ level: '1' }),
-        color: 'neutral.300',
+        color: 'signalDanger',
       },
-      _invalid: {
-        _text: {
-          color: 'signalDanger',
-        },
-      },
-    };
+    },
   },
   sizes: {
     xs: {

@@ -1,15 +1,17 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
-import { FormControl, TextArea as TextAreaNB } from 'native-base';
+import { FormControl } from 'native-base';
+
+import { TextArea as TextAreaNRC } from '../src/components';
 
 const argTypes = {
   value: {
     control: { type: 'text' },
     defaultValue: 'TextArea Text',
   },
-  helperText: {
+  label: {
     control: { type: 'text' },
-    defaultValue: 'This is a helpful explanation',
+    defaultValue: 'Label',
   },
   isDisabled: {
     control: { type: 'boolean' },
@@ -33,34 +35,16 @@ const argTypes = {
   },
 };
 
-const TextAreaMeta: ComponentMeta<typeof TextAreaNB> = {
+const TextAreaMeta: ComponentMeta<typeof TextAreaNRC> = {
   title: 'Components/Textarea',
-  component: TextAreaNB,
+  component: TextAreaNRC,
   argTypes,
-  parameters: {
-    docs: {
-      source: {
-        code: `
-<FormControl>
-  <FormControl.Label>Label</FormControl.Label>
-  <Textarea
-    ${Object.keys(argTypes)
-      .map((arg) => `${arg}="${argTypes[arg].defaultValue}"`)
-      .join('\n    ')}
-  />
-</FormControl>`,
-      },
-    },
-  },
 };
 
 export default TextAreaMeta;
 
-const Template: ComponentStory<typeof TextAreaNB> = (args) => (
-  <FormControl>
-    <FormControl.Label>Label</FormControl.Label>
-    <TextAreaNB {...args} />
-  </FormControl>
+const Template: ComponentStory<typeof TextAreaNRC> = (args) => (
+  <TextAreaNRC {...args} />
 );
 
 export const Textarea = Template.bind({});

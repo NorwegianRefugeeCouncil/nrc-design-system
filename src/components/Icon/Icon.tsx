@@ -7,5 +7,9 @@ import * as icons from '../../assets/icons';
 export const Icon: React.FC<IconProps> = ({ name, ...props }) => {
   const MappedIcon = icons[name];
 
-  return <IconNB {...props}>{MappedIcon && <MappedIcon />}</IconNB>;
+  return (
+    <IconNB {...props} accessibilityLabel={MappedIcon.name}>
+      {MappedIcon && <MappedIcon />}
+    </IconNB>
+  );
 };

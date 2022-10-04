@@ -1,5 +1,6 @@
 import { Meta, Story, Canvas } from "@storybook/addon-docs";
-import { Logo, theme } from '../src';
+import { theme } from '../src';
+import { Logo } from '../src/components';
 import { Text, VStack } from 'native-base';
 
 <Meta
@@ -13,59 +14,13 @@ import { Text, VStack } from 'native-base';
 />
 
 <style>{`
-.logo-container {
-  display: grid;
-  gap: 10px;
-  justify-items: start;
-  text-transform: uppercase;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
-}
-
-.logo-name__main {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-.logo__main {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-.logo-name__horizontal {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-.logo__horizontal {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-.logo-name__mark {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-.logo__mark {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-.logo {
-  grid-area: logo;
-}
-
-@media only screen and (max-width: 600px) {
   .logo-container {
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto auto;
+    display: grid;
+    gap: 10px;
+    justify-items: start;
+    text-transform: uppercase;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
   }
 
   .logo-name__main {
@@ -81,32 +36,76 @@ import { Text, VStack } from 'native-base';
     grid-row-end: 3;
   }
   .logo-name__horizontal {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
   .logo__horizontal {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
   .logo-name__mark {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
   .logo__mark {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
-}
+  .logo {
+    grid-area: logo;
+  }
 
+  @media only screen and (max-width: 600px) {
+    .logo-container {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto auto auto;
+    }
 
+    .logo-name__main {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    .logo__main {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    .logo-name__horizontal {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+    .logo__horizontal {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+    .logo-name__mark {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 5;
+      grid-row-end: 6;
+    }
+    .logo__mark {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 6;
+      grid-row-end: 7;
+    }
+  }
 `}</style>
 
 # Logos
