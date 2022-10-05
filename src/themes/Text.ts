@@ -18,7 +18,7 @@ const textTheme = {
   },
   baseStyle: {
     textAlign: 'auto',
-    color: 'neutral.500',
+    color: 'neutral.700',
     fontFamily: 'body',
     fontStyle: 'normal',
   },

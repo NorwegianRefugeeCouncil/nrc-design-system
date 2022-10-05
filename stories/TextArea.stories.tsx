@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
-import { FormControl } from 'native-base';
 
 import { TextArea as TextAreaNRC } from '../src/components';
 

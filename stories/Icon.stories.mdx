@@ -50,16 +50,19 @@ The Icons components made for Designers have a Frame of 24x24px. This was done t
 Default color is Black #000000 but feel free to use any color of our colors system. 
 
 <Canvas>
-  <Story name="Default" parameters={{ docs: { source: { code:
-    icons.map((item) => {
-      return (`<Icon name={'${item}'} />\n`);
-    }).join('')
+  <Story
+    name="Default"
+    parameters={{ docs: { source: { code:
+      `import { theme } from 'nrc-design-system';
+      ${icons.map((item) => {
+        return (`\n<Icon name={'${item}'} color={theme.colors.neutral['700']} />`);
+      }).join('')}`
     }}}}
   >
     <div className='icons-container'>
       {icons.map((item) => (
         <div key={item}>
-          <Icon name={item} />
+          <Icon name={item} color={theme.colors.neutral['700']}/>
           <Text variant='caption'>{item}</Text>
         </div>
       ))}

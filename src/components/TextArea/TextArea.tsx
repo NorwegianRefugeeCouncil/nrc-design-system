@@ -12,11 +12,7 @@ type Props = {
   'isFocused' | 'isDisabled' | 'value' | 'isInvalid' | 'type' | 'isReadOnly'
 >;
 
-export const TextArea: React.FC<Props> = ({
-  label,
-  isInvalid,
-  ...props
-}) => {
+export const TextArea: React.FC<Props> = ({ label, isInvalid, ...props }) => {
   return (
     <FormControl isInvalid={isInvalid}>
       <FormControl.Label>{label}</FormControl.Label>
