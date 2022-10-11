@@ -1,5 +1,5 @@
 import { withBackgrounds } from '@storybook/addon-ondevice-backgrounds';
-import { NativeBaseProvider } from 'native-base';
+import { NativeBaseProvider, Flex } from 'native-base';
 import { theme } from '../src';
 
 export const parameters = {
@@ -14,7 +14,7 @@ export const decorators = [
   (Story) => {
     return (
       <NativeBaseProvider theme={theme}>
-        <Story />
+        <Story css={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%', padding: '10px'}}/>
       </NativeBaseProvider>
     )
   }

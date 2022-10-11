@@ -9,11 +9,7 @@ export const Icon: React.FC<IconProps> = ({ name, ...props }) => {
   const MappedIcon = icons[name];
 
   return (
-    <IconNB
-      viewBox="0 0 24 24"
-      {...props}
-      accessibilityLabel={MappedIcon.name}
-    >
+    <IconNB viewBox="0 0 24 24" {...props} accessibilityLabel={MappedIcon.name}>
       {MappedIcon && <MappedIcon />}
     </IconNB>
   );

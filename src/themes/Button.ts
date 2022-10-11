@@ -9,7 +9,6 @@ export default {
     height: 10,
     paddingLeft: 10,
     paddingRight: 10,
-    width: 'max-content',
   },
   variants: {
     major: ({ colorScheme }: any) => {
@@ -62,7 +61,7 @@ export default {
         color: `${colorScheme}.500`,
       },
       _icon: {
-        color: 'white',
+        color: `${colorScheme}.500`,
       },
       borderWidth: 1,
       borderStyle: 'solid',

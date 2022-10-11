@@ -20,16 +20,16 @@ const Storybook = () => {
 
     const StorybookUIRoot = getStorybookUI({
         theme: {
-            backgroundColor: theme.colors.themeDark,
+            backgroundColor: theme.colors.themeLight,
             storyListBackgroundColor: theme.colors.themeLight,
             listItemActiveColor: theme.colors.primary['500'],
             listItemActiveTextColor: theme.colors.secondary['500'],
             headerTextColor: theme.colors.neutral['500'],
-            labelColor: theme.colors.neutral['100'],
+            labelColor: theme.colors.neutral['400'],
             borderColor: theme.colors.secondary['100'],
             previewBorderColor: theme.colors.secondary['500'],
-            buttonTextColor: theme.colors.white,
-            buttonActiveTextColor: theme.colors.white,
+            buttonTextColor: theme.colors.neutral['500'],
+            buttonActiveTextColor: theme.colors.secondary['200'],
             secondaryLabelColor: theme.colors.neutral['500'],
         },
         tabOpen: -1,
