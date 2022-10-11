@@ -26,7 +26,6 @@ export const Accordion: FC<Props> = ({
         bg="secondary.500"
         p="2"
         onPress={handleOnPress}
-        flex="true"
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"

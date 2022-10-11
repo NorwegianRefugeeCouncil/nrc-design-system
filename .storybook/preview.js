@@ -14,8 +14,8 @@ export const parameters = {
   backgrounds: {
     default: 'light',
     values: [
-      {name: 'light', value: theme.colors.themeLight},
-      {name: 'dark', value: theme.colors.themeDark}
+      { name: 'light', value: theme.colors.themeLight },
+      { name: 'dark', value: theme.colors.themeDark }
     ],
   },
   controls: {
