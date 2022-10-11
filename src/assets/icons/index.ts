@@ -6,8 +6,6 @@ export * from './ActivityShelter';
 export * from './ActivityWash';
 export * from './ArrowDown';
 export * from './ArrowLeft';
-export * from './ArrowRight';
-export * from './ArrowUp';
 export * from './Calendar';
 export * from './Close';
 export * from './FileText';

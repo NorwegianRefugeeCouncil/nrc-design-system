@@ -23,9 +23,9 @@ export default {
     borderColor: 'neutral.400',
     borderRadius: 'xs',
     color: 'neutral.400',
-    paddingY: 4,
     paddingX: 3,
     height: 10,
+    lineHeight: 10,
     _android: {
       ...textTheme.variants.body({ level: '1' }),
     },

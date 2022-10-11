@@ -26,14 +26,14 @@ export const Alert: FC<Props> = ({
 
   const handleOnPress = () => setShow(false);
 
-  let extraProps = theme.variants.info();
+  let extraProps = theme.variants.info;
 
   switch (variant) {
     case 'error':
-      extraProps = theme.variants.error();
+      extraProps = theme.variants.error;
       break;
     case 'success':
-      extraProps = theme.variants.success();
+      extraProps = theme.variants.success;
       break;
     default:
       break;
@@ -51,7 +51,7 @@ export const Alert: FC<Props> = ({
         {text}
       </Text>
       {isClosable && (
-        <Pressable onPress={handleOnPress}>
+        <Pressable onPress={handleOnPress} pl="2">
           <Icon name={IconNames.Close} {...svgProps} />
         </Pressable>
       )}

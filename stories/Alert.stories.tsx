@@ -13,7 +13,7 @@ const AlertMeta: ComponentMeta<typeof AlertNRC> = {
     },
     variant: {
       options: ['error', 'info', 'success'],
-      control: { type: 'inline-radio' },
+      control: { type: 'radio' },
       defaultValue: 'error',
     },
     isClosable: {

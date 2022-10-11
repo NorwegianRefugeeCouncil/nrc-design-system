@@ -33,6 +33,7 @@ export const TableHeader: React.FC<Props> = ({ header, widths, setWidths }) => {
     >
       <Flex
         flexDirection="row"
+        pr="8"
         justifyContent="space-between"
         alignItems="center"
         minWidth={`${header.column.columnDef.minSize}px`}

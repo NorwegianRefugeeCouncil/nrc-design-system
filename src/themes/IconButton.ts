@@ -21,21 +21,18 @@ export default {
         _hover: {
           backgroundColor:
             colorScheme === 'secondary' ? 'link' : `${colorScheme}.200`,
-
           _icon: {
             color: colorScheme === 'secondary' ? 'white' : `${colorScheme}.500`,
           },
         },
         _disabled: {
           backgroundColor: 'neutral.300',
-
           _icon: {
             color: 'neutral.200',
           },
         },
         _pressed: {
           backgroundColor: `${colorScheme}.300`,
-
           _icon: {
             color: 'white',
           },

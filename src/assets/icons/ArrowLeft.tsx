@@ -3,6 +3,6 @@ import { Path } from 'react-native-svg';
 
 export function ArrowLeft() {
   return (
-    <Path d="M13.7051 14.59L9.12508 10L13.7051 5.41L12.2951 4L6.29508 10L12.2951 16L13.7051 14.59Z" />
+    <Path d="M10.828 12L15.778 16.95L14.364 18.364L8 12L14.364 5.63599L15.778 7.04999L10.828 12Z" />
   );
 }

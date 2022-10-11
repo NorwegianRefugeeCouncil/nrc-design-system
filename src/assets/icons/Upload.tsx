@@ -1,11 +1,8 @@
 import React from 'react';
-import { Path, Svg } from 'react-native-svg';
+import { Path } from 'react-native-svg';
 
 export function Upload() {
   return (
-    <Svg viewBox="0 0 24 24">
-      <Path fill="none" d="M0 0h24v24H0z" />
-      <Path d="M4 19h16v-7h2v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-8h2v7zm9-10v7h-2V9H6l6-6 6 6h-5z" />
-    </Svg>
+    <Path d="M4 17H20V10H22V18C22 18.2652 21.8946 18.5196 21.7071 18.7071C21.5196 18.8946 21.2652 19 21 19H3C2.73478 19 2.48043 18.8946 2.29289 18.7071C2.10536 18.5196 2 18.2652 2 18V10H4V17ZM13 7V14H11V7H6L12 1L18 7H13Z" />
   );
 }

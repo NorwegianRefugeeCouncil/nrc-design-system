@@ -11,12 +11,12 @@ const argTypes = {
   },
   colorScheme: {
     options: ['primary', 'secondary'],
-    control: { type: 'inline-radio' },
+    control: { type: 'radio' },
     defaultValue: 'primary',
   },
   variant: {
     options: ['major', 'minor', 'link'],
-    control: { type: 'inline-radio' },
+    control: { type: 'radio' },
     defaultValue: 'major',
   },
   isDisabled: {

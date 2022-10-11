@@ -1,8 +1,9 @@
+import { Platform } from 'react-native';
+
 export default {
   baseStyle: {
     fill: 'currentColor',
-    viewBox: '0 0 20 20',
-    flex: 0,
+    flex: `${Platform.OS === 'web' ? 'none' : 1}`,
   },
   defaultProps: {
     size: '24px',

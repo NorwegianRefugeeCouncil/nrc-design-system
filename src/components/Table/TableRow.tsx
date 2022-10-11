@@ -22,6 +22,8 @@ export const TableRow = <T extends Record<string, any>>({
         justifyContent="flex-start"
         key={cell.id}
         width={`${widths[i]}px`}
+        pr="8"
+        pl="3"
       >
         <Text fontSize="2xs" lineHeight="3xs" py="4">
           {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -42,10 +44,8 @@ export const TableRow = <T extends Record<string, any>>({
         borderBottomColor="neutral.200"
         borderBottomWidth="1"
         flexDirection="row"
-        gap="8"
         justifyContent="flex-start"
         minHeight="12"
-        px="3"
       >
         {cells.map(renderCell)}
       </Flex>

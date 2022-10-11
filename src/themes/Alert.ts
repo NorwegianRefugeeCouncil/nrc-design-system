@@ -1,8 +1,8 @@
+import { colorTokens } from '../tokens/colors';
 import typography from '../tokens/typography';
 
 export default {
   baseStyle: {
-    height: 'max-content',
     minHeight: 10,
     borderWidth: '1px',
     borderRadius: '0px',
@@ -17,50 +17,49 @@ export default {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    gap: '10px',
   },
   variants: {
-    info: () => ({
-      backgroundColor: 'neutral.100',
-      borderColor: 'neutral.500',
+    info: {
+      backgroundColor: colorTokens.neutral100,
+      borderColor: colorTokens.neutral500,
       _text: {
         height: typography.fontSizes.sm,
         lineHeight: typography.lineHeights.xs,
       },
       textProps: {
-        color: 'neutral.500',
+        color: colorTokens.neutral500,
       },
       svgProps: {
-        color: 'neutral.500',
+        color: colorTokens.neutral500,
       },
-    }),
-    success: () => ({
-      backgroundColor: 'tertiary4.100',
-      borderColor: 'signalSuccess',
+    },
+    success: {
+      backgroundColor: colorTokens.tertiaryFourth100,
+      borderColor: colorTokens.signalSuccess,
       _text: {
         height: typography.fontSizes.sm,
         lineHeight: typography.lineHeights.xs,
       },
       textProps: {
-        color: 'signalSuccess',
+        color: colorTokens.signalSuccess,
       },
       svgProps: {
-        color: 'signalSuccess',
+        color: colorTokens.signalSuccess,
       },
-    }),
-    error: () => ({
-      backgroundColor: 'tertiary2.100',
-      borderColor: 'signalDanger',
+    },
+    error: {
+      backgroundColor: colorTokens.tertiarySecond100,
+      borderColor: colorTokens.signalDanger,
       _text: {
         height: typography.fontSizes.sm,
         lineHeight: typography.lineHeights.xs,
       },
       textProps: {
-        color: 'signalDanger',
+        color: colorTokens.signalDanger,
       },
       svgProps: {
-        color: 'signalDanger',
+        color: colorTokens.signalDanger,
       },
-    }),
+    },
   },
 };

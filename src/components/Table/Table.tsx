@@ -58,7 +58,6 @@ export const Table = <T extends Record<string, any>>({
           bgColor="neutral.100"
           flexDirection="row"
           justifyContent="flex-start"
-          gap="8"
           height="9"
           px="3"
         >
