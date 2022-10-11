@@ -45,9 +45,10 @@ export const DatePicker: React.FC<Props> = ({ date }) => {
         <Box>
           <IconButton
             icon={IconNames.Calendar}
-            onPress={() => setShow(true)}
+            onClick={() => setShow(true)}
             colorScheme="primary"
             variant="major"
+            altText='Calendar'
           />
           {show && (
             <DTP
@@ -65,13 +66,13 @@ export const DatePicker: React.FC<Props> = ({ date }) => {
       )}
       {Platform.OS === 'ios' && (
         <Box>
-          <Button
-            onPress={() => setShow(true)}
+          <IconButton
+            icon={IconNames.Calendar}
+            onClick={() => setShow(true)}
             colorScheme="primary"
             variant="major"
-          >
-            show
-          </Button>
+            altText='Calendar'
+          />
           {show && (
             <DTP
               testID="datePicker"

@@ -5,5 +5,6 @@ export { Input } from './Input/Input';
 export { Logo } from './Logo/Logo';
 export { Alert } from './Alert/Alert';
 export { Accordion } from './Accordion/Accordion';
+export { DatePicker } from './DatePicker/DatePicker';
 export { Table } from './Table/Table';
 export { TextArea } from './TextArea/TextArea';

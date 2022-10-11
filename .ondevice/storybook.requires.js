@@ -34,6 +34,7 @@ const getStories = () => {
     require("../stories/Accordion.stories.tsx"),
     require("../stories/Alert.stories.tsx"),
     require("../stories/Button.stories.tsx"),
+    require("../stories/DatePicker.stories.tsx"),
     require("../stories/IconButton.stories.tsx"),
     require("../stories/Input.stories.tsx"),
     require("../stories/Table.stories.tsx"),
