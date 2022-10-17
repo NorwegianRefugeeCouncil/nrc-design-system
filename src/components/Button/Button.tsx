@@ -10,7 +10,7 @@ type Props = {
   onClick: () => void;
 } & Pick<IButtonProps, 'variant' | 'colorScheme'>;
 
-const ButtonA: React.FC<Props> = ({ ...props }) => {
+export const Button: React.FC<Props> = ({ ...props }) => {
   return (
     <ButtonNB
       {...props}
@@ -23,4 +23,3 @@ const ButtonA: React.FC<Props> = ({ ...props }) => {
     </ButtonNB>
   );
 };
-export default ButtonA;
