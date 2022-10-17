@@ -6,8 +6,7 @@
     "orientation": "portrait",
     "icon": "./static/nrc_logo.png",
     "splash": {
-      "image": "./static/nrc_logo.png",
-      "resizeMode": "contain",
+      "image": "./static/logo.png",
       "backgroundColor": "#EAE7DD"
     },
     "updates": {
@@ -21,7 +20,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./static/nrc_logo.png",
+        "foregroundImage": "./static/logo.png",
         "backgroundColor": "#EAE7DD"
       }
     },
