@@ -83,6 +83,7 @@ export const Table = <T extends Record<string, any>>({
           data={rows}
           keyExtractor={keyExtractor}
           renderItem={renderRow}
+          bg="white"
         />
       </Box>
     </ScrollView>

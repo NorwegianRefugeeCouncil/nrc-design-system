@@ -41,6 +41,8 @@ export const TableRow = <T extends Record<string, any>>({
       _pressed={{ bg: 'primary.200' }}
       onPress={onClick}
       key={row.id}
+      borderBottomColor="neutral.300"
+      borderBottomWidth="1"
     >
       <Flex
         alignItems="flex-start"
