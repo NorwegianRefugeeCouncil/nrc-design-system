@@ -2,6 +2,7 @@ import React from 'react';
 import {
   getCoreRowModel,
   getSortedRowModel,
+  Header,
   Row,
   SortingState,
   useReactTable,
@@ -43,6 +44,21 @@ export const Table = <T extends Record<string, any>>({
   const headers = table.getFlatHeaders();
   const { rows } = table.getRowModel();
 
+  const renderHeaders = (header: Header<T, any>) => (
+    <TableHeader
+      key={header.id}
+      header={header}
+      widths={widths}
+      setWidths={setWidths}
+    />
+  );
+
+  const renderRow = ({ item }: { item: Row<T> }) => (
+    <TableRow row={item} onRowClick={onRowClick} widths={widths} />
+  );
+
+  const keyExtractor = (item: Row<T>) => item.id;
+
   return (
     <ScrollView
       horizontal
@@ -61,21 +77,12 @@ export const Table = <T extends Record<string, any>>({
           height="9"
           px="3"
         >
-          {headers.map((header) => (
-            <TableHeader
-              key={header.id}
-              header={header}
-              widths={widths}
-              setWidths={setWidths}
-            />
-          ))}
+          {headers.map(renderHeaders)}
         </Flex>
         <FlatList
           data={rows}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item: row }) => (
-            <TableRow row={row} onRowClick={onRowClick} widths={widths} />
-          )}
+          keyExtractor={keyExtractor}
+          renderItem={renderRow}
         />
       </Box>
     </ScrollView>

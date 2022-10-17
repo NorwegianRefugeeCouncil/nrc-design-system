@@ -16,33 +16,35 @@ export const TableRow = <T extends Record<string, any>>({
   const cells = row.getAllCells();
 
   const renderCell = (cell: Cell<T, unknown>, i: number) => {
+    const context = cell.getContext();
     return (
       <Flex
         flexDirection="row"
         justifyContent="flex-start"
         key={cell.id}
-        width={`${widths[i]}px`}
+        width={widths[i]}
         pr="8"
         pl="3"
       >
         <Text fontSize="2xs" lineHeight="3xs" py="4">
-          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+          {flexRender(cell.column.columnDef.cell, context)}
         </Text>
       </Flex>
     );
   };
 
+  const onClick = () => onRowClick(row);
+
   return (
     <Pressable
       _hover={{ bg: 'primary.100' }}
       _pressed={{ bg: 'primary.200' }}
-      onPress={() => onRowClick(row)}
+      onPress={onClick}
       key={row.id}
     >
       <Flex
         alignItems="flex-start"
         borderBottomColor="neutral.200"
-        borderBottomWidth="1"
         flexDirection="row"
         justifyContent="flex-start"
         minHeight="12"
