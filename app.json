@@ -20,7 +20,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./static/logo.png",
+        "foregroundImage": "./static/nrc_logo.png",
         "backgroundColor": "#EAE7DD"
       }
     },
