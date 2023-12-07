@@ -30,7 +30,8 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "noEmit": false
   },
   "include": [
     "src/**/*"
@@ -38,7 +39,10 @@
   "exclude": [
     "node_modules",
     "lib",
-    "stories"
+    "stories",
+    "**/*.test.tsx",
+    "**/*.stories.tsx",
+    "**/*.test.js"
   ],
   "extends": "expo/tsconfig.base"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "nrc-design-system",
+  "name": "@nrcno/nrc-design-system",
   "version": "0.1.2",
   "private": false,
   "main": "node_modules/expo/AppEntry.js",
@@ -16,19 +16,20 @@
     "build:cjs": "tsc --module commonjs --outDir lib/cjs",
     "build:esm": "tsc",
     "build": "yarn build:esm && yarn build:cjs",
+    "chromatic": "npx chromatic --project-token=a129fe80d7a1 --storybook-build-dir web-build",
     "deploy": "gh-pages -d web-build",
     "eject": "expo eject",
     "ios": "expo start --ios",
     "lint:fix": "eslint --ext js,ts,tsx --fix .",
     "lint": "eslint --ext js,ts,tsx .",
     "predeploy": "build-storybook -o web-build -s static",
+    "prepublish": "yarn build",
     "prestart": "yarn update-stories",
     "start:native": "expo start",
-    "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
     "start:web": "start-storybook -p 6006",
+    "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
     "update-stories": "sb-rn-get-stories --config-path .ondevice",
-    "web": "expo start --web",
-    "chromatic": "npx chromatic --project-token=a129fe80d7a1 --storybook-build-dir web-build"
+    "web": "expo start --web"
   },
   "dependencies": {
     "@expo-google-fonts/roboto": "~0.2.2",
@@ -125,6 +126,5 @@
       "last 1 safari version"
     ]
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "nrc-design-system@0.1.2"
+  "license": "ISC"
 }
