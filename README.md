@@ -3,6 +3,11 @@
 
 # getting started
 
+You need to have `expo-cli` installed globally
+```
+yarn global add expo-cli
+```
+
 To get all the dependencies run
 
 ```
@@ -12,16 +17,16 @@ yarn install
 To run on the web use
 
 ```
-yarn storybook
+yarn start:web
 ```
 
 To run on ios or android
 
 ```
-yarn start
+yarn start:native
 ```
 
-Then from open the app from the terminal or from the expo ui in ios or android.
+Then open the app from the terminal or from the expo ui in ios or android.
 
 # important for ondevice
 
