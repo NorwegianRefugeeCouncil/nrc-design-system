@@ -28,6 +28,18 @@ yarn start:native
 
 Then open the app from the terminal or from the expo ui in ios or android.
 
+# Compiling and publishing the project
+
+To compile the code and generate the distributable files execute:
+```
+./build.sh
+```
+
+Then you can publish it by running:
+```
+yarn publish
+```
+
 # important for ondevice
 
 If you add new stories on the native (ondevice version) you either need to have the watcher running or run the stories loader
