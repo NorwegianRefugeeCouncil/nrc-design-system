@@ -45,9 +45,10 @@ export const DatePicker: React.FC<Props> = ({ date }) => {
         <Box>
           <IconButton
             icon={IconNames.Calendar}
-            onPress={() => setShow(true)}
+            onClick={() => setShow(true)}
             colorScheme="primary"
             variant="major"
+            altText="show date picker"
           />
           {show && (
             <DTP
