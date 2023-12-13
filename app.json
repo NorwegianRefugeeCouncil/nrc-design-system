@@ -2,7 +2,7 @@
   "expo": {
     "name": "nrc-design-system",
     "slug": "nrc-design-system",
-    "version": "0.1.2",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./static/nrc_logo.png",
     "splash": {
