@@ -1,5 +1,5 @@
 # Using the library
-The design system was built to guide Norwegian Refugee Council's (NRC) digital products, applications and websites. It's based on our brand book and design guidelines found on the identity portal. You can find all the elements you need to create beautiful, consistent, practical, accessible and enjoyable digital products in our design system.
+The [design system](https://norwegianrefugeecouncil.github.io/nrc-design-system/) was built to guide Norwegian Refugee Council's (NRC) digital products, applications and websites. It's based on our brand book and design guidelines found on the identity portal. You can find all the elements you need to create beautiful, consistent, practical, accessible and enjoyable digital products in our design system.
 
 ## Requirements
 This library only works for the following specific React versions:
@@ -8,7 +8,7 @@ react: 17.0.1
 react-dom: 17.0.1
 react-native: 0.64.3
 ```
-So you need to ensure your project uses exactly the same version.
+So you need to ensure your project uses exactly the same.
 
 ## Installation
 ```
@@ -50,6 +50,7 @@ function App() {
   );
 }
 ```
+You can find the guidelines with visuals, examples and code snippets [here](https://norwegianrefugeecouncil.github.io/nrc-design-system/).
 
 # Contributing
 
