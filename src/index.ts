@@ -1,9 +1,28 @@
-import * as NativeBase from 'native-base';
-import * as Components from './components';
+import {
+    Button,
+    IconButton,
+    Icon,
+    Input,
+    Logo,
+    Alert,
+    Accordion,
+    Table,
+    TextArea
+} from './components';
 
-type ComponentsType = typeof NativeBase & typeof Components;
+export * from 'native-base';
 
-export const components: ComponentsType = { ...NativeBase, ...Components } as ComponentsType;
+export {
+    Button,
+    IconButton,
+    Icon,
+    Input,
+    Logo,
+    Alert,
+    Accordion,
+    Table,
+    TextArea,
+};
 
 export { default as theme } from './themes';
 export { default as tokens } from './tokens';
