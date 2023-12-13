@@ -8,7 +8,7 @@
   "files": [
     "lib"
   ],
-  "homepage": "https://nrc-no.github.io/nrc-design-system/",
+  "homepage": "https://norwegianrefugeecouncil.github.io/nrc-design-system/",
   "scripts": {
     "android": "expo start --android",
     "build-storybook": "build-storybook",
