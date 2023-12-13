@@ -125,5 +125,8 @@
       "last 1 safari version"
     ]
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "ISC"
 }
