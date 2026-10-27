@@ -7,4 +7,4 @@ docker build -t nrc-design-system .
 mkdir -p lib
 
 # Run the Docker image and execute the build script
-docker run --rm -v $(pwd)/lib:/usr/src/app/lib nrc-design-system yarn build
+docker run --rm --user "$(id -u):$(id -g)" -v "$(pwd)/lib:/usr/src/app/lib" nrc-design-system yarn build
